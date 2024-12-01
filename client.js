@@ -11,7 +11,56 @@ const paymentRequest = stripe.paymentRequest({
     },
     requestPayerName: true,
     requestPayerEmail: true,
+    shippingOptions: [
+        {
+          id: 'free-shipping',
+          label: 'Free shipping',
+          detail: 'Arrives in 5 to 7 days',
+          amount: 0,
+        },
+      ],
+      displayItems: [
+        {
+          label: 'Sample item',
+          amount: 1000,
+        },
+        {
+          label: 'Shipping cost',
+          amount: 1000,
+        }
+      ],
+
+      applePay: {
+        recurringPaymentRequest: {
+          paymentDescription: 'My subscription',
+          managementURL: 'https://example.com/billing',
+          regularBilling: {
+            amount: 2500,
+            label: 'Monthly subscription fee',
+            recurringPaymentIntervalUnit: 'month',
+            recurringPaymentIntervalCount: 1,
+          },
+        },
+      },
 });
+
+paymentRequest.on('shippingaddresschange', async (ev) => {
+    if (ev.shippingAddress.country !== 'US') {
+      ev.updateWith({status: 'invalid_shipping_address'});
+    } else {
+      const response = await fetch('/calculateShipping', {
+        data: JSON.stringify({
+          shippingAddress: ev.shippingAddress
+        })
+      });
+      const result = await response.json();
+  
+      ev.updateWith({
+        status: 'success',
+        shippingOptions: result.supportedShippingOptions,
+      });
+    }
+  });
 
 const elements = stripe.elements();
 const prButton = elements.create('paymentRequestButton', {
