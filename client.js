@@ -3,8 +3,8 @@ const stripe = Stripe('pk_test_A7jK4iCYHL045qgjjfzAfPxu', {
 });
 
 const paymentRequest = stripe.paymentRequest({
-    country: 'CA',
-    currency: 'can',
+    country: 'US',
+    currency: 'usa',
     total: {
       label: 'Demo total',
       amount: 1099,
