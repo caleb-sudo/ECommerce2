@@ -7,12 +7,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="/index.js" defer></script>
+        <script>
+            const addMessage = (message) => {
+  const messagesDiv = document.querySelector('#messages');
+  messagesDiv.style.display = 'block';
+  const messageWithLinks = addDashboardLinks(message);
+  messagesDiv.innerHTML += `> ${messageWithLinks}<br>`;
+  console.log(`Debug: ${message}`);
+};
+
+const addDashboardLinks = (message) => {
+  const piDashboardBase = 'https://dashboard.stripe.com/test/payments';
+  return message.replace(
+    /(pi_(\S*)\b)/g,
+    `<a href="${piDashboardBase}/$1" target="_blank">$1</a>`
+  );
+};
+        </script>
     </head>
     <body>
-        <span style="margin-top: 49%;">
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-b7b5ed3a-8a0d-4232-9b51-e59d0bc2b15b" data-elfsight-app-lazy></div>
-        </span>
+        <main>
+            <form id="payment-form">
+                <div id="link-authentication-element">
+                  <!-- Elements will create authentication element here -->
+                </div>
+                <div id="payment-element">
+                  <!-- Elements will create form elements here -->
+                </div>
+                <button id="submit">Pay now</button>
+                <div id="error-message">
+                  <!-- Display error message to your customers here -->
+                </div>
+              </form>
         
+              <div id="messages" role="alert" style="display: none;"></div>
+        </main>
     </body>
 </html>
