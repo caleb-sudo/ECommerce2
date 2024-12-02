@@ -13,7 +13,9 @@ body {
   display: flex;
   justify-content: center;
   font-size: 1.2em;
-  color: var(--dark-terminal-color);
+  background-color: black;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(25, 9, 241));
+  color: white;
 }
 
 main {
@@ -94,3 +96,18 @@ fieldset, input, select {
   border-radius: var(--radius);
   font-size:0.7em;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: none;
+    margin: none;
+}
+
+.menu {
+    cursor: pointer;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-size: 20px;
+    padding: 20px;
+  }
