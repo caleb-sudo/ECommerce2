@@ -1,71 +1,22 @@
-const int products = 16;
+const books = [
+  //non-fiction
+  ["Quantum Supremacy", 15.99, "Michio Kaku", "Science", "NonFiction"],
+  ["On The Origin Of Time", 15.99, "Stephen Hawking", "Science", "NonFiction"],
+  ["Origins", 10.00, "Neil DeGrasse Tyson", "Science", "NonFiction"],
+  ["Astrophysics for people in a hurry", 15.99, "Neil DeGrasse Tyson", "Science", "NonFiction"],
+  ["An astronaut's guide to life", 10.00, "Chris Hadfield", "Science", "NonFiction"],
+  ["The Grand Design", 18.00, "Stephen Hawking", "Science", "NonFiction"],
+  ["Letters from an Astrophysicist", 25.00, "Neil DeGrasse Tyson", "Science", "NonFiction"],
+  ["Brief Answers, Big Questions, Collection", 50.00, "Stephen Hawking", "Science", "NonFiction"],
+  ["The C Programming Language", 15.00, "Brian W. Kernighan & Dennis M. Ritchie", "Computer Science", "NonFiction"],
 
-function Product(name, price, author, theme, fiction, Nonfiction) {
-  this.name = name;
-  this.price = price;
-  this.author = author;
-  this.theme = theme;
-  this.fiction = fiction;
-  this.Nonfiction = Nonfiction;
-}
-
-for (const int index = 0; index < products; index++) {
-  switch(index) {
-    case 0:
-      const product = new Product("Quantum Supremacy", 15.99, "Michio Kaku", "astrophysics", false, true);
-      break;
-
-    case 1:
-      const product = new Product("On The Origin Of Time", 15.99, "Stephen Hawking", "astrophysics", false, true);
-      break;
-
-    case 2:
-      const product = new Product("Origins", 10.00, "Neil DeGrasse Tyson", "astrophysics", false, true);
-      break;
-
-    case 3:
-      const product = new Product("Astrophysics for people in a hurry", 15.99, "Neil DeGrasse Tyson", "astrophysics", false, true);
-      break;
-
-    case 4:
-      const product = new Product("An astronaut's guide to life", 10.00, "Chris Hadfield", "Space", false, true);
-      break;
-
-    case 5:
-      const product = new Product("", 10.00, "", "", false, true);
-      break;
-
-    case 6:
-      break;
-
-    case 7:
-      break;
-
-    case 8:
-      break;
-
-    case 9:
-      break;
-
-    case 10:
-      break;
-
-    case 11:
-      break;
-
-    case 12:
-      break;
-
-    case 13:
-      break;
-
-    case 14:
-      break;
-
-    case 15:
-      break;
-
-    case 16:
-      break;
-  }
-}
+  //fiction
+  ["The Three Body Problem Trilogy", 50.00, "Cixin Liu", "Science Fiction", "Fiction"],
+  ["Supernova Era", 15.00, "Cixin Liu", "Science Fiction", "Fiction"],
+  ["Ball Lightning", 15.00, "Cixin Liu", "Science Fiction", "Fiction"],
+  ["To Hold Up The Sky", 15.00, "Cixin Liu", "Short Story, Science Fiction", "Fiction"],
+  ["The Wandering Earth", 15.00, "Cixin Liu", "Short Story, Science Fiction", "Fiction"],
+  ["The Redemtion Of Time", 20.00, "Baoshu", "Science Fiction", "Fiction"],
+  ["Bowl Of Heaven & Shipstar", 30.00, "Gregory Benford & Larry Niven", "Science Fiction", "Fiction"],
+  ["Glourious", 15.00, "Gregory Benford & Larry Niven", "Science Fiction", "Fiction"],
+]
