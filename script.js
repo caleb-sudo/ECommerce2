@@ -47,3 +47,8 @@ function CatagoryCheckBox() {
         let a = books[i][4];
     }
 }
+
+function Increase() {
+  var pict = document.getElementById("mainPict");
+  
+}
