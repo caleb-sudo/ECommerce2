@@ -1,28 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-:root {
-  --light-grey: #F6F9FC;
-  --dark-terminal-color: #0A2540;
-  --accent-color: #635BFF;
-  --radius: 3px;
-}
-
 body {
-  padding: 20px;
-  font-family: 'Raleway';
-  justify-content: center;
-  font-size: 1.2em;
   background-color: black;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(25, 9, 241));
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(25, 9, 241));
   color: white;
 }
 
 main {
   width: 480px;
-}
-
-form > * {
-  margin: 10px 0;
 }
 
 button {
@@ -41,27 +24,19 @@ button {
   transition: all 0.2s ease;
   display: block;
 }
+
 button:hover {
   filter: contrast(115%);
 }
+
 button:active {
   transform: translateY(0px) scale(0.98);
   filter: brightness(0.9);
 }
+
 button:disabled {
   opacity: 0.5;
   cursor: none;
-}
-
-input, select {
-  display: block;
-  font-size: 1.1em;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
 }
 
 a {
@@ -73,7 +48,9 @@ small {
   font-size: .6em;
 }
 
-fieldset, input, select {
+fieldset,
+input,
+select {
   border: 1px solid #efefef;
 }
 
@@ -87,26 +64,27 @@ fieldset, input, select {
 
 #messages {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
-  display: none; /* hide initially, then show once the first message arrives */
+  display: none;
+  /* hide initially, then show once the first message arrives */
   background-color: #0A253C;
   color: #00D924;
   padding: 20px;
   margin: 20px 0;
   border-radius: var(--radius);
-  font-size:0.7em;
+  font-size: 0.7em;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    padding: none;
-    margin: none;
+  display: flex;
+  justify-content: center;
+  padding: none;
+  margin: none;
 }
 
 .menu {
-    cursor: pointer;
-    padding-left: 90px;
-    padding-right: 90px;
-    font-size: 20px;
-    padding: 20px;
-  }
+  cursor: pointer;
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 20px;
+  padding: 20px;
+}
