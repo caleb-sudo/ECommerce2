@@ -42,7 +42,8 @@ button:disabled {
 .column {
   border: 1px solid black;
   border-radius: 25;
-  color: white;
+  color: black;
+  background-color: white;
   padding: 5px;
   margin: 5px 5px 5px 5px;
   cursor: pointer;
