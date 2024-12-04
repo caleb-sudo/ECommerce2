@@ -21,12 +21,6 @@ const books = [
   ["Glourious", 15.00, "Gregory Benford & Larry Niven", "Science Fiction", "Fiction"],
 ]
 
-var nofict = document.getElementById("Non-Fiction");
-var fict = document.getElementById("Fiction");
-
-nofict.checked = true;
-fict.checked = true;
-
 function search() {
     var input = document.getElementById("Search");
     var filter = input.value.toUpperCase();
