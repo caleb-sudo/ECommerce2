@@ -84,6 +84,10 @@ nav {
   font-size: x-larger;
 }
 
+.in {
+  cursor: pointer;
+}
+
 .cart-onBtn {
   color:white;
   width: 50px;
