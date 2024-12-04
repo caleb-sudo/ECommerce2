@@ -25,9 +25,13 @@ function search() {
     var input = document.getElementById("Search");
     var filter = input.value.toUpperCase();
     var span = document.getElementsByClass("title");
+    var auther = documnent.getElementsByClass("auther");
     for (var i = 0; i < span.length; i++) {
         var a = span[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        var b = auther[i].getElementsByTagName("a")[0];
+        var ab = a.innerHTML.toUpperCase(filter);
+        var bc = b.innerHTML.toUpperCase(filter);
+        if (ab > -1 || bc > -1) {
             span[i].style.display = "";
         } else {
             span[i].style.display = "none";
