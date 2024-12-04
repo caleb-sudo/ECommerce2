@@ -24,7 +24,7 @@ const books = [
 function search() {
     var input = document.getElementById("Search");
     var filter = input.value.toUpperCase();
-    var th = document.getElementByClassNames("title");
+    var th = document.getElementsByClassName("title");
     var span = th.getElementsByTagName("span");
     for (var i = 0; i < span.length; i++) {
         var a = span[i].getElementsByTagName("a")[0];
