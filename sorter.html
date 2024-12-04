@@ -46,14 +46,7 @@
           <label for="Non-Fiction">
             Non-Fiction
           </label>
-          <fieldset style="margin-left: 49%;">
-            <legend>
-              <b>
-                Search
-              </b>
-            </legend>
-            <input type="text" id="Search" onkeyup="search()" placeholder="Search...">
-          </fieldset>
+          <input type="text" id="Search" onkeyup="search()" placeholder="Search..." style="margin-left: 49%;">
           <br>
           <input type="checkbox" id="Fiction" name="Catagory1" value="Fiction">
           <label for="Fiction">
@@ -87,6 +80,35 @@
           <br>
           <input type="reset" value="Reset">
         </fieldset>
+        <select name="autherSelect" id="autherSelect">
+          <option value="Michio">
+            Michio Kaku
+          </option>
+          <option value="hawking">
+            Stephen Hawking
+          </option>
+          <option value="NeilDeGrasse">
+            Neil DeGrasse Tyson
+          </option>
+          <option value="Hadfield">
+            Chris Hadfield
+          </option>
+          <option value="BD">
+            Brian W. Kernighan & Dennis M. Ritchie
+          </option>
+          <option value="Cixin">
+            Cixin Liu
+          </option>
+          <option value="Baoshu">
+            Baoshu
+          </option>
+          <option value="GL">
+            Gregory Benford & Larry Niven
+          </option>
+        </select>
+        <label for="autherSelect">
+          Auther: 
+        </label>
       </form>
     </section>
     <br>
