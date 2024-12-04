@@ -24,7 +24,7 @@ const books = [
 function search() {
     var input = document.getElementById("Search");
     var filter = input.value.toUpperCase();
-    var span = document.getElementsByClassName("title");
+    var span = document.getElementsByClass("title");
     for (var i = 0; i < span.length; i++) {
         var a = span[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -45,6 +45,21 @@ function CatagoryCheckBox() {
     for (var i = 0; i < books.length; i++) {
         let a = books[i][4];
     }
+}
+
+function checkTopic() {
+  var topics = document.getElementsByName("Topics");
+  for (var i = 0; i < topics.length; i++) {
+    if (topics[i].checked) {
+      var th = document.getElementsByClass(topics[i].value);
+      var a = document.getElementsByTagName(th);
+      if (a.getElementsByClass(topics[i].value) == topics[i].value) {
+        th[i].style.display = "";
+      } else {
+        th[i].style.display = "none";
+      }
+    }
+  }
 }
 
 function Increase() {
