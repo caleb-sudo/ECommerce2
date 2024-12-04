@@ -64,6 +64,7 @@ nav {
   justify-content: center;
   padding: none;
   margin: none;
+  position: sticky;
 }
 
 .menu {
