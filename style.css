@@ -90,7 +90,9 @@ nav {
   background-color: yellow;
   border: 1px solid white;
   border-radius: 10;
-  font-size: x-larger;
+  font-size: 20px;
+  display: inline-block;
+  padding: 15px 15px 5px 5px;
 }
 
 .in {
