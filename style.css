@@ -8,13 +8,9 @@ main {
   width: 480px;
 }
 
-aside {
-  width: 30%;
-  padding-left: 15px;
-  margin-left: 15px;
+.sideR {
   float: right;
-  font-style: italic;
-  background-color: lightgray;
+  padding-left: 15px;
 }
 
 button {
