@@ -66,7 +66,21 @@ function checkTopic() {
   }
 }
 
+function addTexts() {
+  var title = document.getElementById("bookTitle").innerHTML;
+  var desc = document.getElementById("bookDescription").innerHTML;
+  for (var i = 0; i < books.length; i++) {
+    for (var j = 0; j < books.length; i++) {
+    }
+  }
+}
+
 function Increase() {
   var pict = document.getElementById("mainPict");
+  
+}
+
+function addToCart() {
+  var btn = document.getElementsByClass("cartBtn");
   
 }
