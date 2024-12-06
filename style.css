@@ -14,6 +14,10 @@ button {
   background-color: var(--accent-color);
 }
 
+footer {
+  background-color: #eee;
+}
+
 .column {
   float: left;
   width: 50%;
@@ -131,6 +135,16 @@ nav {
 
 .cartBtn:active {
   animation: cartBtnclicked;
+}
+
+.footerLink {
+  color: #0000EE;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  text-decoration: underline;
 }
 
 @keyframes cartBtnClicked {
