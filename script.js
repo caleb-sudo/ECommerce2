@@ -86,3 +86,55 @@ function addToCart() {
   var btn = document.getElementsByClass("cartBtn");
   
 }
+
+function page0() {
+  page = 0;
+}
+function page1() {
+  page = 1;
+}
+function page2() {
+  page = 2;
+}
+function page3() {
+  page = 3;
+}
+function page4() {
+  page = 4;
+}
+function page5() {
+  page = 5;
+}
+function page6() {
+  page = 6;
+}
+function page7() {
+  page = 7;
+}
+function page8() {
+  page = 8;
+}
+function page9() {
+  page = 9;
+}
+function page10() {
+  page = 10;
+}
+function page11() {
+  page = 11;
+}
+function page12() {
+  page = 12;
+}
+function page13() {
+  page = 13;
+}
+function page14() {
+  page = 14;
+}
+function page15() {
+  page = 15;
+}
+function page16() {
+  page = 16;
+}
