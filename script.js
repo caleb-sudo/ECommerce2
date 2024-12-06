@@ -73,14 +73,11 @@ function addTexts() {
   var auther = docuement.getElementById("bookAuther");
   var price = document.getElementById("bookPrice");
   var desc = document.getElementById("bookDescription");
-  if (page > -1) {
-    window.location.href = "productPage.html";
-    for (var i = 0; i < books.length; i++) {
-      title.innerHTML = books[0][page];
-      author.innerHTML = books[2][page];
-      price.innerHTML = books[1][page];
-      desc.innerHTML = books[5][page];
-    }
+  for (var i = 0; i < books.length; i++) {
+    title.innerHTML = books[0][page];
+    author.innerHTML = books[2][page];
+    price.innerHTML = books[1][page];
+    desc.innerHTML = books[5][page];
   }
 }
 
@@ -96,54 +93,86 @@ function addToCart() {
 
 function page0() {
   page = 0;
-  alert(page);
+  location.href = "productPage.html";
+  addTexts();
 }
 function page1() {
   page = 1;
-  alert(page);
+  location.href = "productPage.html";
+  addTexts();
 }
 function page2() {
   page = 2;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page3() {
   page = 3;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page4() {
   page = 4;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page5() {
   page = 5;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page6() {
   page = 6;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page7() {
   page = 7;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page8() {
   page = 8;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page9() {
   page = 9;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page10() {
   page = 10;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page11() {
   page = 11;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page12() {
   page = 12;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page13() {
   page = 13;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page14() {
   page = 14;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page15() {
   page = 15;
+  location.href = "productPage.html";
+  addTexts();
 }
 function page16() {
   page = 16;
+  location.href = "productPage.html";
+  addTexts();
 }
