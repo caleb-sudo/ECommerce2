@@ -105,8 +105,8 @@ nav {
 
 .cartBtn {
   cursor: pointer;
-  color: white;
-  background-color: yellow;
+  color: black;
+  background-color: #eee;
   border: 1px solid white;
   border-radius: 10px;
   text-align: center;
