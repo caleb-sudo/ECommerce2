@@ -21,7 +21,7 @@ const books = [
   ["Glourious", 15.00, "Gregory Benford & Larry Niven", "Science Fiction", "Fiction"],
 ]
 
-var page;
+var page = -1;
 
 function search() {
     var input = document.getElementById("Search");
@@ -89,9 +89,11 @@ function addToCart() {
 
 function page0() {
   page = 0;
+  alert(page);
 }
 function page1() {
   page = 1;
+  alert(page);
 }
 function page2() {
   page = 2;
