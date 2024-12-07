@@ -36,21 +36,25 @@
   <article>
     <section>
       <form method="get">
-        <fieldset>
+        <fieldset style="float:left;">
           <legend>
             <b>
-              Attributes
+              Filters
             </b>
           </legend>
           <input type="checkbox" id="Non-Fiction" name="Catagory1" value="Non-Fiction" class="in" checked>
           <label for="Non-Fiction">
             Non-Fiction
           </label>
-          <input type="text" id="Search" onkeyup="search()" placeholder="Search..." style="margin-left: 49%;">
           <br>
           <input type="checkbox" id="Fiction" name="Catagory1" value="Fiction" class="in" checked>
           <label for="Fiction">
             Fiction
+          </label>
+          <br>
+          <input type="checkbox" id="DealChecker" value="Deals" class="in">
+          <label for="DealChecker">
+            Deals
           </label>
           <br>
           <fieldset>
@@ -80,39 +84,86 @@
             </div>
           </fieldset>
           <br>
-          <label for="autherSelect">
-            Author: 
-          </label>
-          <br>
-          <select name="autherSelect" id="autherSelect" class="in">
-            <option value="Michio">
+          <fieldset>
+            <legend>
+              Authors
+            </legend>
+            <input type="radio" name="Authors" value="All" id="All">
+            <label for="All">
+              All
+            </label>
+            <input type="radio" name="Authors" value="Michio" id="Michio">
+            <label for="Michio">
               Michio Kaku
-            </option>
-            <option value="Thomas">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Thomas" value="Thomas">
+            <label for="Thomas">
               Thomas Hertog
-            </option>
-            <option value="hawking">
-              Stephen Hawking
-            </option>
-            <option value="NeilDeGrasse">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Neil" value="Neil">
+            <label for="Neil">
               Neil DeGrasse Tyson
-            </option>
-            <option value="Hadfield">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="don" value="don">
+            <label for="don">
+              Donald Goldsmith
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Chris" value="Chris">
+            <label for="Chris">
               Chris Hadfield
-            </option>
-            <option value="BD">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Stephen" value="Stephen">
+            <label for="Stephen">
+              Stephen Hawking
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="BR" value="BR">
+            <label for="BR">
               Brian W. Kernighan & Dennis M. Ritchie
-            </option>
-            <option value="Cixin">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Cixin" value="Cixin">
+            <label for="Cixin">
               Cixin Liu
-            </option>
-            <option value="Baoshu">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Baoshu" value="Baoshu">
+            <label for="Baoshu">
               Baoshu
-            </option>
-            <option value="GL">
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="GL" value="GL">
+            <label for="GL">
               Gregory Benford & Larry Niven
-            </option>
-          </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>
+              Prices
+            </legend>
+            <div class="rangeContainer">
+              <div class="slideControls">
+                <input type="range" id="from" value="10" min="0" max="80">
+                <input type="range" id="to" value="80" min="0" max="80">
+              </div>
+              <div class="formControl">
+                <div class="controlContainer">
+                    <div class="controlContainerTime">Min</div>
+                    <input class="controlContainerTimeInput" type="number" id="fromInput" value="10" min="0" max="90"/>
+                </div>
+                <div class="controlContainer">
+                    <div class="controlContainerTime">Max</div>
+                    <input class="controlContainerTimeInput" type="number" id="toInput" value="80" min="0" max="90"/>
+                </div>
+              </div>
+            </div>
+            
+          </fieldset>
           <input type="reset" value="Reset">
         </fieldset>
       </form>
