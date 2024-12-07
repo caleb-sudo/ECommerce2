@@ -174,3 +174,91 @@ function page16() {
   location.href = "productPage.html";
   addTexts();
 }
+
+function controlFromInput(from, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+  if (from > to) {
+      from.value = to;
+      fromInput.value = to;
+  } else {
+      from.value = from;
+  }
+}
+  
+function controlToInput(to, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+  setToggleAccessible(toInput);
+  if (from <= to) {
+      to.value = to;
+      toInput.value = to;
+  } else {
+      toInput.value = from;
+  }
+}
+
+function controlFrom(from, to, fromInput) {
+const [from, to] = getParsed(from, to);
+fillSlider(from, to, '#C6C6C6', '#25daa5', to);
+if (from > to) {
+  from.value = to;
+  fromInput.value = to;
+} else {
+  fromInput.value = from;
+}
+}
+
+function controlTo(from, to, toInput) {
+const [from, to] = getParsed(from, to);
+fillSlider(from, to, '#C6C6C6', '#25daa5', to);
+setToggleAccessible(to);
+if (from <= to) {
+  to.value = to;
+  toInput.value = to;
+} else {
+  toInput.value = from;
+  to.value = from;
+}
+}
+
+function getParsed(currentFrom, currentTo) {
+const from = parseInt(currentFrom.value, 10);
+const to = parseInt(currentTo.value, 10);
+return [from, to];
+}
+
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+  const rangeDistance = to.max-to.min;
+  const fromPosition = from.value - to.min;
+  const toPosition = to.value - to.min;
+  controlSlider.style.background = `linear-gradient(
+    to right,
+    ${sliderColor} 0%,
+    ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+    ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+    ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+    ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+    ${sliderColor} 100%)`;
+}
+
+function setToggleAccessible(currentTarget) {
+const to = document.querySelector('#to');
+if (Number(currentTarget.value) <= 0 ) {
+  to.style.zIndex = 2;
+} else {
+  to.style.zIndex = 0;
+}
+}
+
+const from = document.querySelector('#from');
+const to = document.querySelector('#to');
+const fromInput = document.querySelector('#fromInput');
+const toInput = document.querySelector('#toInput');
+fillSlider(from, to, '#C6C6C6', '#25daa5', to);
+setToggleAccessible(to);
+
+from.oninput = () => controlFrom(from, to, fromInput);
+to.oninput = () => controlTo(from, to, toInput);
+fromInput.oninput = () => controlFromInput(from, fromInput, toInput, to);
+toInput.oninput = () => controlToInput(to, fromInput, toInput, to);

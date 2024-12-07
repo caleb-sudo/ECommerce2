@@ -168,7 +168,6 @@ nav {
 .rangeContainer {
   display: flex;
   flex-direction: column;
-  width: 80%;
   margin: 35% auto;
 }
 
@@ -197,7 +196,6 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
   pointer-events: all;
   width: 24px;
   height: 24px;
