@@ -92,12 +92,13 @@ nav {
   justify-content: center;
   padding: none;
   margin: none;
-  background-color: #eee;
 }
 
 .stick {
   position: sticky;
   top: 0;
+  background-color: #eee;
+  z-index: 1;
 }
 
 .menu {
