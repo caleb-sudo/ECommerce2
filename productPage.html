@@ -7,7 +7,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
     </head>
     <body>
         <header>
@@ -30,22 +29,54 @@
         </nav>
         <hr>
         <br>
-        <section>
+        <p id="test">
+
+        </p>
             <div class="pictures" onclick="Increase()">
             </div>
-            <div class="sideR">
+            <fieldset style="float:right;padding-right:100px;">
+              <div>
                 <h2 id="bookTitle"></h2>
+                <h3 id="bookAuther">
+                </h3>
                 <hr>
                 <p id="bookDescription"></p>
                 <div id="payDeliver">
                     <button class="cartBtn" onclick="addToCart()">
                         <b>
-                            Add To Cart
+                          Add To Cart
                         </b>
                     </button>
                 </div>
-            </div>
-        </section>
+              </div>
+            </fieldset>
+              <script>
+                const books = [
+                  //non-fiction
+                  ["Quantum Supremacy", "15.99", "Michio Kaku", "Science", "NonFiction", ""],
+                  ["On The Origin Of Time", "15.99", "Stephen Hawking", "Science", "NonFiction", ""],
+                  ["Origins", "10.00", "Neil DeGrasse Tyson", "Science", "NonFiction", ""],
+                  ["Astrophysics for people in a hurry", "15.99", "Neil DeGrasse Tyson", "Science", "NonFiction", ""],
+                  ["An astronaut's guide to life", "10.00", "Chris Hadfield", "Science", "NonFiction", ""],
+                  ["The Grand Design", "18.00", "Stephen Hawking", "Science", "NonFiction", ""],
+                  ["Letters from an Astrophysicist", "25.00", "Neil DeGrasse Tyson", "Science", "NonFiction", ""],
+                  ["Brief Answers, Big Questions, Collection", "50.00", "Stephen Hawking", "Science", "NonFiction", ""],
+                  ["The C Programming Language", "15.00", "Brian W. Kernighan & Dennis M. Ritchie", "Computer Science", "NonFiction", ""],
+
+                  //fiction
+                  ["The Three Body Problem Trilogy", "50.00", "Cixin Liu", "Science Fiction", "Fiction", ""],
+                  ["Supernova Era", "15.00", "Cixin Liu", "Science Fiction", "Fiction", ""],
+                  ["Ball Lightning", "15.00", "Cixin Liu", "Science Fiction", "Fiction", ""],
+                  ["To Hold Up The Sky", "15.00", "Cixin Liu", "Short Story, Science Fiction", "Fiction", ""],
+                  ["The Wandering Earth", "15.00", "Cixin Liu", "Short Story, Science Fiction", "Fiction", ""],
+                  ["The Redemtion Of Time", "20.00", "Baoshu", "Science Fiction", "Fiction", ""],
+                  ["Bowl Of Heaven & Shipstar", "30.00", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", ""],
+                  ["Glourious", "15.00", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", ""],
+                ]
+                document.getElementById("bookTitle").innerHTML = books[0][0] + " " + books[0][1];
+                document.getElementById("bookAuther").innerHTML = "By: " + books[0][2];
+                document.getElementById("bookDescription").innerHTML = books[0][5];
+              </script>
         <footer>
 
         </footer>
