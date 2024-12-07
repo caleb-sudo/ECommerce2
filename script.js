@@ -1,8 +1,8 @@
 const books = [
   //non-fiction
   ["Quantum Supremacy", "15.99", "Michio Kaku", "Science", "NonFiction", ""],
-  ["On The Origin Of Time", "15.99", "Stephen Hawking", "Science", "NonFiction", ""],
-  ["Origins", "10.00", "Neil DeGrasse Tyson", "Science", "NonFiction", ""],
+  ["On The Origin Of Time", "15.99", "Thomas Hertog", "Science", "NonFiction", ""],
+  ["Origins", "10.00", "Neil DeGrasse Tyson & Donald Goldsmith", "Science", "NonFiction", ""],
   ["Astrophysics for people in a hurry", "15.99", "Neil DeGrasse Tyson", "Science", "NonFiction", ""],
   ["An astronaut's guide to life", "10.00", "Chris Hadfield", "Science", "NonFiction", ""],
   ["The Grand Design", "18.00", "Stephen Hawking", "Science", "NonFiction", ""],
