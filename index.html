@@ -13,7 +13,46 @@
   </head>
   <body>
     <header>
-
+      <div style="text-align:left;float:left;padding-left:15px;margin-right:20px;">
+        <h2>
+          <b>
+            SciBooks
+          </b>
+        </h2>
+      </div>
+      <div class="find">
+        <select>
+          <option value="All" selected>
+            All
+          </option>
+          <optgroup label="Topics">
+            <option value="Science">
+              Science
+            </option>
+            <option value="Computer-Science">
+              Computer Science
+            </option>
+            <option value="Space">
+              Space
+            </option>
+            <option value="Short-Stories">
+              Short Stories
+            </option>
+          </optgroup>
+          <optgroup lable="Authors">
+            <option value="Michio-Kaku">
+              Michio Kaku
+            </option>
+            <option value="Thomas">
+              Thomas Hertog
+            </option>
+            <option value="NeilDeGrasse">
+              Neil DeGrasse Tyson
+            </option>
+          </optgroup>
+        </select>
+        <input type="text" id="Search" onkeyup="search()" placeholder="Search..." style="margin-left: 49%;">
+      </div>
     </header>
     <nav class="stick">
       <hr>
