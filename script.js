@@ -22,7 +22,9 @@ const books = [
 ]
 
 var page = -1;
-
+document.getElementById("bookTitle").innerHTML = books[7][page] + "<br>" + books[7][page];
+document.getElementById("bookAuther").innerHTML = "By: " + books[7][page];
+document.getElementById("bookDescription").innerHTML = books[7][page];
 function search() {
     var input = document.getElementById("Search");
     var filter = input.value.toUpperCase();
@@ -91,13 +93,11 @@ function addToCart() {
 
 function page0() {
   page = 0;
-  location.href = "productPage.html";
-  addTexts();
+  window.location.href = "productPage.html";
 }
 function page1() {
   page = 1;
-  location.href = "productPage.html";
-  addTexts();
+  window.location.href = "productPage.html";
 }
 function page2() {
   page = 2;
