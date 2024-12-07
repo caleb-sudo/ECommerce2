@@ -37,8 +37,7 @@
             <fieldset style="float:right;padding-right:100px;">
               <div>
                 <h2 id="bookTitle"></h2>
-                <h3 id="bookAuther">
-                </h3>
+                <h3 id="bookAuther"></h3>
                 <hr>
                 <p id="bookDescription"></p>
                 <div id="payDeliver">
@@ -60,7 +59,7 @@
                   ["An astronaut's guide to life", "10.00", "Chris Hadfield", "Science", "NonFiction", ""],
                   ["The Grand Design", "18.00", "Stephen Hawking", "Science", "NonFiction", ""],
                   ["Letters from an Astrophysicist", "25.00", "Neil DeGrasse Tyson", "Science", "NonFiction", ""],
-                  ["Brief Answers, Big Questions, Collection", "<span style='color:red;'><s>$60.00</s><br>25% off</span>$45.00", "Stephen Hawking", "Science", "NonFiction", ""],
+                  ["Brief Answers, Big Questions, Collection", "<span style='color:red;'><s><br>$60.00</s><br>25% off</span>$45.00", "Stephen Hawking", "Science", "NonFiction", ""],
                   ["The C Programming Language", "15.00", "Brian W. Kernighan & Dennis M. Ritchie", "Computer Science", "NonFiction", ""],
 
                   //fiction
@@ -73,7 +72,7 @@
                   ["Bowl Of Heaven & Shipstar", "30.00", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", ""],
                   ["Glourious", "15.00", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", ""],
                 ]
-                document.getElementById("bookTitle").innerHTML = books[7][0] + " " + books[7][1];
+                document.getElementById("bookTitle").innerHTML = books[7][0] + "<br>" + books[7][1];
                 document.getElementById("bookAuther").innerHTML = "By: " + books[7][2];
                 document.getElementById("bookDescription").innerHTML = books[7][5];
               </script>
