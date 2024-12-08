@@ -55,14 +55,6 @@ th {
   cursor: pointer;
 }
 
-#search {
-  width: 60%;
-}
-
-#selector {
-  width: 40%;
-}
-
 #search,
 #selector {
   color: black;
