@@ -59,6 +59,11 @@ th {
   cursor: pointer;
 }
 
+#Search {
+  color: black;
+  border: 1px solid #181819;
+}
+
 #payment-form {
   border: #F6F9FC solid 1px;
   border-radius: var(--radius);
