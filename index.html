@@ -9,19 +9,23 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="sorter.js"></script>
-    <script src="productPage.js"></script>
   </head>
   <body>
     <header>
       <div class="headTitle">
         <p>
           <b>
-            SciBooks
+            <span style="color:blue;">
+              Sci
+            </span>
+            <span style="color:yellow;">
+              Books
+            </span>
           </b>
         </p>
       </div>
-      <div class="find" style="margin: none;">
-        <select>
+      <div id="find" style="margin: none;">
+        <select id="selector">
           <option value="All" selected>
             All
           </option>
@@ -72,8 +76,7 @@
             </option>
           </optgroup>
         </select>
-        <input type="text" id="Search" onkeyup="search()" placeholder="Search...">
-        <input type="submit">
+        <input type="text" id="search" onkeyup="search()" placeholder="Search...">
       </div>
     </header>
     <nav class="stick">
@@ -133,7 +136,12 @@
       </div>
       <br>
       <h2>
-        SciBooks
+        <span style="color:blue;">
+          Sci
+        </span>
+        <span style="color:yellow;">
+          Books
+        </span>
       </h2>
     </footer>
   </body>

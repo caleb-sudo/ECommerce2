@@ -55,9 +55,23 @@ th {
   cursor: pointer;
 }
 
-#Search {
+#search {
+  width: 60%;
+}
+
+#selector {
+  width: 40%;
+}
+
+#search,
+#selector {
   color: black;
   border: 1px solid #181819;
+}
+
+#search:hover,
+#selector:hover {
+  border: 1px solid lightblue;
 }
 
 #payment-form {
