@@ -59,11 +59,6 @@ th {
   cursor: pointer;
 }
 
-th:hover {
-  text-decoration: underline;
-  font-size: 20px;
-}
-
 #payment-form {
   border: #F6F9FC solid 1px;
   border-radius: var(--radius);
@@ -104,6 +99,7 @@ nav {
   padding-right: 90px;
   font-size: 20px;
   padding: 20px;
+  border: 1px solid #eee;
 }
 
 .menu:hover {
