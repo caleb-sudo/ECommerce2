@@ -106,6 +106,10 @@ nav {
   padding: 20px;
 }
 
+.menu:hover {
+  border: 1px solid black;
+}
+
 .cartBtn {
   cursor: pointer;
   color: black;
