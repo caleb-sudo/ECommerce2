@@ -25,22 +25,21 @@ var page = -1;
 document.getElementById("bookTitle").innerHTML = books[7][page] + "<br>" + books[7][page];
 document.getElementById("bookAuther").innerHTML = "By: " + books[7][page];
 document.getElementById("bookDescription").innerHTML = books[7][page];
+
 function search() {
-    var input = document.getElementById("Search");
-    var filter = input.value.toUpperCase();
-    var span = document.getElementsByClass("title");
-    var auther = documnent.getElementsByClass("auther");
-    for (var i = 0; i < span.length; i++) {
-        var a = span[i].getElementsByTagName("a")[0];
-        var b = auther[i].getElementsByTagName("a")[0];
-        var ab = a.innerHTML.toUpperCase(filter);
-        var bc = b.innerHTML.toUpperCase(filter);
-        if (ab > -1 || bc > -1) {
-            span[i].style.display = "";
-        } else {
-            span[i].style.display = "none";
-        }
-    }
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("Search");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("searchMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
 }
 
 function CatagoryCheckBox() {
