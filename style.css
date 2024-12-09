@@ -18,6 +18,7 @@ footer {
 .pictures {
   margin: none;
   padding: none;
+  float: right;
 }
 
 .column {
