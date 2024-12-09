@@ -15,6 +15,11 @@ footer {
   background-color: #eee;
 }
 
+.pictures {
+  margin: none;
+  padding: none;
+}
+
 .column {
   float: left;
   width: 50%;
