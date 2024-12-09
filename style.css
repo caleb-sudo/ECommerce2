@@ -51,6 +51,7 @@ select {
   border: 1px solid #efefef;
 }
 
+.social,
 th {
   cursor: pointer;
 }
