@@ -33,25 +33,12 @@ footer {
   clear: both;
 }
 
-.items {
-  float: right;
-  padding-right: 5px;
-}
-
 #searchItems {
   margin: none;
   z-index: 1;
   color: black;
   background-color: white;
   box-shadow: 10px 10px 50px -20x black;
-}
-
-.information {
-  float: left;
-  padding-left: 5px;
-  background-color: #eee;
-  border: 1px solid black;
-  border-radius: 10;
 }
 
 a {
