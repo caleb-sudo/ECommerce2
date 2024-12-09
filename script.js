@@ -1,3 +1,5 @@
+var carted = 0;
+
 const books = [
   //non-fiction
   ["Quantum Supremacy", "15.99", "Michio Kaku", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
@@ -110,5 +112,15 @@ function Increase() {
 
 function addToCart() {
   var btn = document.getElementsByClass("cartBtn");
-  
+  carted++;
+}
+
+function cart() {
+  for (var i = 0; i < carted; i++) {
+    const para = document.createElement("li");
+    const node = document.createTextNode(books[0][0]);
+    para.appendChild(node);
+    const element = document.getElementById("itemsList");
+    element.appendChild(para);
+  }
 }
