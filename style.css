@@ -33,6 +33,14 @@ footer {
   clear: both;
 }
 
+.items {
+  float: left;
+}
+
+.information {
+  float: right;
+}
+
 #searchItems {
   margin: none;
   z-index: 1;
