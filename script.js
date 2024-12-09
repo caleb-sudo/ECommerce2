@@ -27,18 +27,31 @@ document.getElementById("bookAuther").innerHTML = "By: " + books[7][page];
 document.getElementById("bookDescription").innerHTML = books[7][page];
 
 function search() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("Search");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("searchMenu");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
+  var input = document.getElementById("Search");
+  var filter = input.value.toUpperCase();
+  var ul = document.getElementById("searchMenu");
+  var li = ul.getElementsByTagName("li");
+  for (var i = 0; i < li.length; i++) {
+      var a = li[i].getElementsByTagName("a")[0];
       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
           li[i].style.display = "none";
       } else {
           li[i].style.display = "";
       }
+  }
+}
+
+function filterAuthor() {
+  var input = document.getElementsByClass("rad");
+  var sect = document.getElementsByClass("booksSect");
+  var table = sect.getElementsByClass("booksTable");
+  var row = table.getElementsByClass("booksRow");
+  var th = row.getElementsByTagName("th");
+  for (var i = 0; i < th.length; i++) {
+    var span = th.getElementsByClass("auther");
+    if (span.innerHTML.toUpperCase().indexOf(input.innerHTML) > -1) {
+      th[i].style.display = "";
+    } else th[i].style.display = "none";
   }
 }
 
