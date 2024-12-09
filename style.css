@@ -38,6 +38,7 @@ footer {
   color: black;
   background-color: white;
   box-shadow: 10px 10px 50px -20x black;
+  display: none;
 }
 
 .information {
