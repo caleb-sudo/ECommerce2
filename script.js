@@ -26,7 +26,7 @@ document.getElementById("bookTitle").innerHTML = books[7][page] + "<br>" + books
 document.getElementById("bookAuther").innerHTML = "By: " + books[7][page];
 document.getElementById("bookDescription").innerHTML = books[7][page];
 document.getElementById("pict1").src = books[7][6];
-document.getElementById("pict2").src = books[7][7];
+document.getElementById("pict2").src = books[7][6];
 document.getElementById("pict3").src = books[7][8];
 document.getElementById("pict4").src = books[7][9];
 
