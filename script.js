@@ -132,42 +132,37 @@ function addToCart() {
   carted++;
 }
 
-function cartCookie(p, pval, exp) {
+function setCookie(cname,cvalue,exdays) {
   const d = new Date();
-  d.setTime(d.getTime() + (exp*24*60*60*1000));
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
   let expires = "expires=" + d.toUTCString();
-  document.cookie = p + "=" + pval + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCartCookie(p) {
-  let item = p + "=";
+function getCookie(cname) {
+  let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
+  for(let i = 0; i < ca.length; i++) {
     let c = ca[i];
-    while (c.charAt(0) == ' ') c = c.substring(1);
-    if (c.indexOf(item) == 0) return c.substring(item.length, c.length);
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
   }
   return "";
 }
 
-function checkCartCookie() {
-  let item = getCookie(page);
-  if (item == " ") {
-    for (var i = 0; i < carted; i++) {
-      const para = document.createElement("li");
-      const node = document.createTextNode(books[0][0]);
-      para.appendChild(node);
-      const element = document.getElementById("itemsList");
-      element.appendChild(para);
-    }
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
   } else {
-    if (item != "" && item != null) {
-      const para = document.createElement("li");
-      const node = document.createTextNode("Your cart is empty");
-      para.appendChild(node);
-      const element = document.getElementById("itemsList");
-      element.appendChild(para);
-    }
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
   }
 }
