@@ -49,6 +49,16 @@ footer {
   box-shadow: 10px 10px 50px -20x black;
 }
 
+#searchMenu {
+  visibility: hidden;
+  display: none;
+}
+
+#searchMenu.active {
+  visibility: visible;
+  display: contents;
+}
+
 a {
   color: var(--accent-color);
   font-weight: 900;
