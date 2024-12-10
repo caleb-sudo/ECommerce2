@@ -3,9 +3,9 @@ var carted = 0;
 const books = [
   //non-fiction
   ["Quantum Supremacy", "15.99", "Michio Kaku", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["On The Origin Of Time", "15.99", "Thomas Hertog", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Origins", "10.00", "Neil DeGrasse Tyson & Donald Goldsmith", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Astrophysics for people in a hurry", "15.99", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["On The Origin Of Time", "15.99", "Thomas Hertog", "Science", "NonFiction", "", "resources/book2(1).jpg", "resources/book2(2).jpg", "resources/book2(3).jpg", "resources/book2(4).jpg"],
+  ["Origins", "10.00", "Neil DeGrasse Tyson & Donald Goldsmith", "Science", "NonFiction", "", "resources/book4(1).jpg", "resources/book3(2).jpg", "resources/book3(3).jpg", "resources/book3(4).jpg"],
+  ["Astrophysics for people in a hurry", "15.99", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book5(1).jpg", "resources/book5(2).jpg", "resources/book5(3).jpg", "resources/book5(4).jpg"],
   ["An astronaut's guide to life", "10.00", "Chris Hadfield", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
   ["The Grand Design", "18.00", "Stephen Hawking", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
   ["Letters from an Astrophysicist", "25.00", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
@@ -24,13 +24,26 @@ const books = [
 ]
 
 var page = -1;
-document.getElementById("bookTitle").innerHTML = books[7][1] + "<br>" + books[7][1];
-document.getElementById("bookAuther").innerHTML = "By: " + books[7][page];
-document.getElementById("bookDescription").innerHTML = books[7][page];
-document.getElementById("pict1").src = books[7][6];
-document.getElementById("pict2").src = books[7][7];
-document.getElementById("pict3").src = books[7][8];
-document.getElementById("pict4").src = books[7][9];
+
+function product(p) {
+  window.location.href = "productPage.html";
+
+  var title = document.getElementById("bookTitle");
+  var auther = document.getElementById("bookAuther");
+  var desc = document.getElementById("bookDescription");
+  var pict1 = document.getElementById("pict1");
+  var pict2 = document.getElementById("pict2");
+  var pict3 = document.getElementById("pict3");
+  var pict4 = document.getElementById("pict4");
+
+  title.innerHTML = books[p][0] + "<br>" + books[p][1];
+  auther.innerHTML = "By: " + books[p][2];
+  desc.innerHTML = books[p][5];
+  pict1.src = books[p][6];
+  pict2.src = books[p][7];
+  pict3.src = books[p][8];
+  pict4.src = books[p][9];
+}
 
 function search() {
   var input = document.getElementById("Search");
