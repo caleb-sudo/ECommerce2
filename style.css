@@ -108,8 +108,22 @@ th {
 
 #CheckoutBtn {
   padding: 5px 10px 5px 10px;
+  background-color: #eee;
   text-align: center;
   border-radius: 10px;
+}
+
+#cancelBtn {
+  float: center;
+  background-color: #eee;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 50px 10px 50px;
+}
+
+#CheckoutBtn:hover,
+#cancelBtn:hover {
+  opacity: 0.5;
 }
 
 nav {
