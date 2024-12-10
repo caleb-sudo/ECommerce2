@@ -75,6 +75,12 @@ th {
   cursor: pointer;
 }
 
+th {
+  border: 1px solid transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 th:hover {
   border: 1px solid black;
 }
