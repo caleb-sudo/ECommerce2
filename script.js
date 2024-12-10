@@ -127,11 +127,6 @@ function Increase() {
   
 }
 
-function addToCart() {
-  var btn = document.getElementsByClass("cartBtn");
-  carted++;
-}
-
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -163,6 +158,22 @@ function checkCookie() {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
+     }
+  }
+}
+
+function buildCart() {
+  let item = getCookie("username");
+  if (item != "") {
+    const para = document.createElement("li");
+    const node = document.createTextNode(item);
+    para.appendChild(node);
+    const element = document.getElementById("itemsList");
+    element.appendChild(para);
+  } else {
+    item = prompt("Please enter your name:","");
+     if (item != "" && item != null) {
+       setCookie("username", item, 30);
      }
   }
 }
