@@ -36,7 +36,7 @@ function product(p) {
   var pict3 = document.getElementById("pict3");
   var pict4 = document.getElementById("pict4");
 
-  title.innerHTML = books[p][0] + "<br>" + books[p][1];
+  title.innerHTML = books[0][p] + "<br>" + books[1][p];
   auther.innerHTML = "By: " + books[p][2];
   desc.innerHTML = books[p][5];
   pict1.src = books[p][6];
