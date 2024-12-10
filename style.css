@@ -75,6 +75,10 @@ th {
   cursor: pointer;
 }
 
+th:hover {
+  border: 1px solid black;
+}
+
 #search,
 #selector {
   color: black;
