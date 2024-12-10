@@ -2,25 +2,25 @@ var carted = 0;
 
 const books = [
   //non-fiction
-  ["Quantum Supremacy", "15.99", "Michio Kaku", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["On The Origin Of Time", "15.99", "Thomas Hertog", "Science", "NonFiction", "", "resources/book2(1).jpg", "resources/book2(2).jpg", "resources/book2(3).jpg", "resources/book2(4).jpg"],
-  ["Origins", "10.00", "Neil DeGrasse Tyson & Donald Goldsmith", "Science", "NonFiction", "", "resources/book4(1).jpg", "resources/book3(2).jpg", "resources/book3(3).jpg", "resources/book3(4).jpg"],
-  ["Astrophysics for people in a hurry", "15.99", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book5(1).jpg", "resources/book5(2).jpg", "resources/book5(3).jpg", "resources/book5(4).jpg"],
-  ["An astronaut's guide to life", "10.00", "Chris Hadfield", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["The Grand Design", "18.00", "Stephen Hawking", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Letters from an Astrophysicist", "25.00", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Brief Answers, Big Questions, Collection", "<span style='color:red;'><s>60.00</s><br>25% off</span>45.00", "Stephen Hawking", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["The C Programming Language", "15.99", "Brian W. Kernighan & Dennis M. Ritchie", "Computer Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Quantum Supremacy", "$15.99", "Michio Kaku", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["On The Origin Of Time", "$15.99", "Thomas Hertog", "Science", "NonFiction", "", "resources/book2(1).jpg", "resources/book2(2).jpg", "resources/book2(3).jpg", "resources/book2(4).jpg"],
+  ["Origins", "$10.00", "Neil DeGrasse Tyson & Donald Goldsmith", "Science", "NonFiction", "", "resources/book4(1).jpg", "resources/book3(2).jpg", "resources/book3(3).jpg", "resources/book3(4).jpg"],
+  ["Astrophysics for people in a hurry", "$15.99", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book5(1).jpg", "resources/book5(2).jpg", "resources/book5(3).jpg", "resources/book5(4).jpg"],
+  ["An astronaut's guide to life", "$10.00", "Chris Hadfield", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["The Grand Design", "<span style='color:red;'><s>$18.00</s><br>50% off </span>$9.00", "Stephen Hawking", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Letters from an Astrophysicist", "$25.00", "Neil DeGrasse Tyson", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Brief Answers, Big Questions, Collection", "<span style='color:red;'><s>$60.00</s><br>25% off </span>$45.00", "Stephen Hawking", "Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["The C Programming Language", "$15.99", "Brian W. Kernighan & Dennis M. Ritchie", "Computer Science", "NonFiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
 
   //fiction
-  ["The Three Body Problem Trilogy", "50.00", "Cixin Liu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Supernova Era", "15.99", "Cixin Liu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Ball Lightning", "15.99", "Cixin Liu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["To Hold Up The Sky", "15.99", "Cixin Liu", "Short Story, Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["The Wandering Earth", "15.99", "Cixin Liu", "Short Story, Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["The Redemtion Of Time", "20.00", "Baoshu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Bowl Of Heaven & Shipstar", "30.00", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
-  ["Glourious", "15.99", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["The Three Body Problem Trilogy", "$50.00", "Cixin Liu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Supernova Era", "$15.99", "Cixin Liu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Ball Lightning", "$15.99", "Cixin Liu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["To Hold Up The Sky", "$15.99", "Cixin Liu", "Short Story, Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["The Wandering Earth", "$15.99", "Cixin Liu", "Short Story, Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["The Redemtion Of Time", "$20.00", "Baoshu", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Bowl Of Heaven & Shipstar", "<span style='color:red;'><s>$30.00</s><br>50% off </span>$15.00", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
+  ["Glourious", "$15.99", "Gregory Benford & Larry Niven", "Science Fiction", "Fiction", "", "resources/book1(1).jpg", "resources/book1(2).jpg", "resources/book1(3).jpg", "resources/book1(4).jpg"],
 ]
 
 var page = -1;
@@ -36,7 +36,7 @@ function product(p) {
   var pict3 = document.getElementById("pict3");
   var pict4 = document.getElementById("pict4");
 
-  title.innerHTML = books[0][p] + "<br>" + books[1][p];
+  title.innerHTML = books[p][0] + "<br>" + books[p][1];
   auther.innerHTML = "By: " + books[p][2];
   desc.innerHTML = books[p][5];
   pict1.src = books[p][6];
