@@ -24,7 +24,7 @@ const books = [
 ]
 
 var page = -1;
-document.getElementById("bookTitle").innerHTML = books[7][page] + "<br>" + books[7][page];
+document.getElementById("bookTitle").innerHTML = books[7][1] + "<br>" + books[7][1];
 document.getElementById("bookAuther").innerHTML = "By: " + books[7][page];
 document.getElementById("bookDescription").innerHTML = books[7][page];
 document.getElementById("pict1").src = books[7][6];
