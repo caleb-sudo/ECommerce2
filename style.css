@@ -85,6 +85,11 @@ th:hover {
   border: 1px solid black;
 }
 
+#minPrice,
+#maxPrice {
+  curosor: n-resize;
+}
+
 #search,
 #selector {
   color: black;
