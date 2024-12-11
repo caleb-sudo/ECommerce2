@@ -247,6 +247,10 @@ th:hover {
   border: 1px solid black;
 }
 
+footer {
+  background-color: #eee;
+}
+
 #minPrice,
 #maxPrice {
   curosor: n-resize;
