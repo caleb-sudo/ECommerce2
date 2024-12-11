@@ -25,6 +25,8 @@ const books = [
 
 var page = -1;
 
+let p = [];
+
 function product(p) {
   window.location.href = "productPage.html";
 
