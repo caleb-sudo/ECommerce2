@@ -79,7 +79,7 @@ function updateCart() {
                 <button onclick={incrItem(${item.id})}>+</button>
             </div>
             <p>$${item.price}</p>
-            <button onclick={deleteItem(${item.id})} class="cart-product" id=${item.id}>D</button></div>
+            <button onclick={deleteItem(${item.id})} class="cart-product" id=${item.id}>Remove</button></div>
            </div>`
   );
 
