@@ -7,7 +7,7 @@ main {
   padding-left: 15px;
 }
 
-      * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -283,26 +283,6 @@ th:hover {
   font-size: 0.7em;
 }
 
-#CheckoutBtn {
-  padding: 5px 10px 5px 10px;
-  background-color: #eee;
-  text-align: center;
-  border-radius: 10px;
-}
-
-#cancelBtn {
-  float: center;
-  background-color: #eee;
-  text-align: center;
-  border-radius: 10px;
-  padding: 10px 50px 10px 50px;
-}
-
-#CheckoutBtn:hover,
-#cancelBtn:hover {
-  opacity: 0.5;
-}
-
 nav {
   display: flex;
   justify-content: center;
@@ -353,20 +333,6 @@ header {
 
 .in {
   cursor: pointer;
-}
-
-.cart-onBtn {
-  color:white;
-  width: 50px;
-  height: 50px;
-}
-
-.cartBtn:hover {
-  animation: cartBtnClicked;
-}
-
-.cartBtn:active {
-  animation: cartBtnclicked;
 }
 
 .footerLink {
