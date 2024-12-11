@@ -25,7 +25,7 @@ const books = [
 
 var page = -1;
 
-function product(var p) {
+function product(p) {
   window.location.href = "productPage.html";
 
   var title = document.getElementById("bookTitle");
