@@ -18,104 +18,28 @@ const products = [
   { name: "Glourious", price: 15.99, id: 17, quantity: 1, },
 ];
 
-const productsHTML = products.map(
-  (product) => `<div class="product-card">
-        <h2 class="product-name">${product.name}</h2>
-        <strong>$${product.price}</strong>
-        <button class="product-btn" id=${product.id}>Add to Cart</button>
-    </div>`
-);
-const result = document.querySelector(".result");
-result.innerHTML = productsHTML.join("");
-
-let cart = [];
-
-function addToCart(products, id){
-  const product = products.find((product) => product.id === id);
-  const cartProduct = cart.find((product) => product.id === id);
-  if (cartProduct != undefined && product.id == cartProduct.id) {
-    incrItem(id);
+function showCart() {
+  if (CheckBrowser()) {
+    var key = "";
+    var list = "<tr><th>Item</th><th>Value</th></tr>\n";
+    var i = 0;
+    for (i = 0; i <= localStorage.length-1; i++) {
+      key = localStorage.key(i);
+      list += "<tr><td>" + key + "</td>\n<td>" + localStorage.getItem(key) + "</td></tr>\n";
+    }
+    if (list == "<tr><th>Item</th><th>Value</th></tr>\n") {
+        list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+    }
+    document.getElementById('list').innerHTML = list;
   } else {
-    cart.unshift(product);
+    alert('Cannot save shopping list as your browser does not support HTML 5');
   }
-  updateCart();
-  getTotal(cart);
-};
-
-
-function getTotal(cart) {
-  let { totalItem, cartTotal } = cart.reduce(
-    (total, cartItem) => {
-      total.cartTotal += cartItem.price * cartItem.quantity;
-      total.totalItem += cartItem.quantity;
-      return total;
-    },
-    { totalItem: 0, cartTotal: 0 }
-  );
-  const totalItemsHTML = document.querySelector(".noOfItems");
-  totalItemsHTML.innerHTML = `${totalItem} items`;
-  const totalAmountHTML = document.querySelector(".total");
-  totalAmountHTML.innerHTML = `$${cartTotal}`;
 }
 
-getTotal(cart);
-
-let num = document.querySelectorAll(".product-btn").length;
-for (let i = 0; i < num; i++) {
-  document
-    .querySelectorAll(".product-btn")
-  [i].addEventListener("click", function (e) {
-    addToCart(products, parseInt(e.target.id));
-  });
+function CheckBrowser() {
+	if ('localStorage' in window && window['localStorage'] !== null) {
+		return true;
+	} else {
+			return false;
+	}
 }
-
-function updateCart() {
-  const cartHTML = cart.map(
-    (item) => `<div class="cart-item">
-            <h3>${item.name}</h3>
-            <div class="cart-detail"><div class="mid">
-                <button onclick={decrItem(${item.id})}>-</button>
-                <p>${item.quantity}</p>
-                <button onclick={incrItem(${item.id})}>+</button>
-            </div>
-            <p>$${item.price}</p>
-            <button onclick={deleteItem(${item.id})} class="cart-product" id=${item.id}>Remove</button></div>
-           </div>`
-  );
-
-  const cartItems = document.querySelector(".cart-items");
-  cartItems.innerHTML = cartHTML.join("");
-}
-
-function deleteItem(id) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id === id) {
-      cart[i].quantity = 1;
-      cart.splice(i, 1);
-    }
-  }
-  updateCart();
-  getTotal(cart);
-}
-
-function decrItem(id) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id == id && cart[i].quantity > 1) {
-      cart[i].quantity -= 1;
-    }
-  }
-  updateCart();
-  getTotal(cart);
-}
-
-function incrItem(id) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i] && cart[i].id == id) {
-      cart[i].quantity += 1;
-    }
-  }
-  updateCart();
-  getTotal(cart);
-}
-
-updateCart();
