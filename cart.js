@@ -29,6 +29,8 @@ function addTask(text) {
 }
 
 function addItem() {
+	const item = localStorage.getItem('Quantum Supremacy');
+	addTask(item);
 }
 
 function removeItem() {
