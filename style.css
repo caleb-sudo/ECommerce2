@@ -101,6 +101,7 @@ hr {
     border: 1px solid rgb(203, 203, 203);
     padding: 0rem 1rem;
     margin: 0.3rem 0;
+    float: left;
 }
 .cart-detail{
   display: flex;
