@@ -1,5 +1,3 @@
-let carts = document.querySelectorAll('.cart');
-
 const products = [
   { name: "Quantum Supremacy", price: 15.99, id: 1, quantity: 1, },
   { name: "On The Origin Of Time", price: 15.99, id: 2, quantity: 1, },
@@ -20,46 +18,27 @@ const products = [
   { name: "Glourious", price: 15.99, id: 17, quantity: 1, },
 ];
 
-for(let i=0; i< carts.length; i++) {
-  carts[i].addEventListener('click', () => {
-  cartNumbers(products[i]);
-  totalCost(products[i]);
-}); }
-  
-function displayCart() {
-  let cartItems = localStorage.getItem('productsInCart');
-  cartItems = JSON.parse(cartItems);
-  
-  let cart = localStorage.getItem("totalCost");
-  cart = parseInt(cart);
-  
-  let productContainer = document.querySelector('.products');
-  
-  if( cartItems && productContainer ) {
-    productContainer.innerHTML = '';
-    Object.values(cartItems).map( (item, index) => {
-    productContainer.innerHTML += `
-      <div class="product">
-        <ion-icon name="close-circle" color="primary">
-        </ion-icon>
-        <span>
-          ${item.name}
-        </span>
-      </div>
-      <div>
-        ${item.price}
-      </div>
-      <div class="quantity">
-        <ion-icon class="decrease" name="arrow-dropleft-circle" color="primary">
-        </ion-icon>
-        <span>
-          ${item.inCart}
-        </span>
-        <ion-icon class="increase" name="arrow-dropright-circle" color="primary">
-        </ion-icon>   
-      </div>
-      <div class="total">
-        ${item.inCart * item.price}
-      </div>
-    `;
-});
+const ul = document.querySelector('ul');
+let items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+items.forEach(addTask);
+function addTask(text) {
+	const li = document.createElement('li');
+	li.textContent = text;
+	ul.appendChild(li);
+}
+
+function addItem() {
+	const item = localStorage.getItem('Quantum Supremacy');
+	addTask(item);
+}
+
+function removeItem() {
+	
+}
+
+function clearCart() {
+	localStorage.clear();
+	ul.innerHTML = '';
+	items = [];
+}

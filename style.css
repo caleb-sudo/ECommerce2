@@ -245,6 +245,10 @@ footer {
   background-color: #eee;
 }
 
+#bookDescription {
+  word-wrap: break-word;
+}
+
 #minPrice,
 #maxPrice {
   cursor: n-resize;
