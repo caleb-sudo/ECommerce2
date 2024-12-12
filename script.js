@@ -50,10 +50,8 @@ function search() {
   var filter = input.value.toUpperCase();
   var ul = document.getElementById("searchMenu");
   var li = ul.getElementsByTagName("li");
-  input.addEventListener('input', () => {
-    input.classList.toggle('active');
-    input.focus();
-  });
+  var as = li.getElementsByTagName("a");
+  as.classList.toggle("show");
   for (var i = 0; i < li.length; i++) {
       var a = li[i].getElementsByTagName("a")[0];
       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {

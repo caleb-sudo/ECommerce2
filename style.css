@@ -213,7 +213,8 @@ hr {
 
 #searchMenu {
   visibility: hidden;
-  display: none;
+  display: inline-block;
+  position: relative;
 }
 
 #searchMenu.active {
@@ -353,6 +354,7 @@ header {
   margin: auto;
   text-align: center;
   font-family: arial;
+  padding:none;
 }
 
 .price {
