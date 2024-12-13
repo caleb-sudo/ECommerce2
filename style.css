@@ -211,6 +211,12 @@ hr {
   box-shadow: 10px 10px 50px -20x black;
 }
 
+.desc {
+  float:right !important;
+  padding-right:100px;
+  width:60%;
+}
+
 #searchMenu {
   visibility: hidden;
   display: inline-block;
