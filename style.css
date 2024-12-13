@@ -50,6 +50,7 @@ h1 {
 .container{
     padding: 0 1rem 0 2rem;
 }
+
 .heading{
     text-align: center;
     font-size: 1.3rem;
@@ -95,7 +96,7 @@ button:hover {
   float: right;
 }
 
-.collapsible {
+.collapsible button{
   background-color: #777;
   color: white;
   cursor: pointer;
@@ -107,7 +108,8 @@ button:hover {
   font-size: 15px;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover button{
   background-color: #555;
 }
 
