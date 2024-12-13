@@ -219,11 +219,20 @@ hr {
 }
 
 .genre {
+  float: right;
+}
+
+.topic {
   float: left;
+}
+
+.genre,
+.topic {
   padding: 5px 15px 5px 15px;
   color: white;
   background-color: black;
   border-radius: 20px;
+  margin: none;
 }
 
 .row {
