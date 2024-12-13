@@ -58,7 +58,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-button {
+.checkOutBtn {
     background-color: #ffd84d;
     color: rgb(60, 60, 60);
     padding: 0.6rem 1rem;
@@ -71,7 +71,7 @@ button {
     font-size: 0.9rem;
 }
 
-button:hover {
+.checkOutBtn:hover {
     background-color: #fbcc24;
     transform: translateY(2px);
 }
@@ -91,7 +91,7 @@ button:hover {
     justify-content: space-between;
 }
 
-.collapsible button{
+.collapsible {
   background-color: #777;
   color: white;
   cursor: pointer;
@@ -104,7 +104,7 @@ button:hover {
 }
 
 .active,
-.collapsible:hover button{
+.collapsible:hover {
   background-color: #555;
 }
 
