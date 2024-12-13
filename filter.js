@@ -1,3 +1,6 @@
+var table = document.getElementById("booksTable");
+var tr = table.getElementsByTagName("tr");
+
 var topics = document.getElementsByClassName("");
 var author = document.getElementsByClassName("auther");
 
