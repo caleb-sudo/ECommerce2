@@ -1,9 +1,6 @@
 var table = document.getElementById("booksTable");
 var tr = table.getElementsByTagName("tr");
 
-var topics = document.getElementsByClassName("");
-var author = document.getElementsByClassName("auther");
-
 var nonfict = document.getElementById("Non-Fiction").checked;
 var fict = document.getElementById("Fiction").checked;
 
@@ -28,52 +25,25 @@ var cix = document.getElementById("Cixin").checked;
 var bao = document.getElementById("Baoshu").checked;
 var gl = document.getElementById("GL").checked;
 
-if (nonfict) {
-
-}
-
-if (fict) {
-
-}
-
-if (deals) {
-
-}
-
-if (allTopics) {
-
-} else if (sci) {
-
-} else if (cs) {
-
-} else if (space) {
-
-} else if (ss) {
-
-}
-
-if (all) {
-    
-} else if (mic) {
-
-} else if (tho) {
-
-} else if (nei) {
-
-} else if (don) {
-
-} else if (chr) {
-
-} else if (ste) {
-
-} else if (leo) {
-
-} else if (bdr) {
-
-} else if (cix) {
-
-} else if (bao) {
-
-} else if (gl) {
-    
+for (var i = 0; i < tr.length; i++) {
+    for (var j = 0; j < 3; j++) {
+        var th = tr[i][j].getElementsByTagName("th")[0][0];
+        if (th) {
+            var genre = th.getElementsByClassName("genre").textContent;
+            var topic = th.getElementsByClassName("topic").textContent;
+            if (nonfict) {
+                if (genre.toUpperCase().indexOf("Non-Fiction") > -1) {
+                    tr[i][j].style.display = "";
+                } else tr[i][j].style.display = "none";
+            }
+            if (fict) {
+                if (genre.toUpperCase().indexOf("Fiction") > -1) {
+                    tr[i][j].style.display = "";
+                } else tr[i][j].style.display = "none";
+            }
+            if (allTopics) {
+                tr[i][j].style.display = "";
+            }
+        }
+    }
 }
