@@ -91,6 +91,10 @@ button:hover {
     justify-content: space-between;
 }
 
+.booksTable {
+  float: left;
+}
+
 hr {
     color: gray;
     margin: 0.5rem 0;
