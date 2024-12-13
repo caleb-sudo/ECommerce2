@@ -25,24 +25,12 @@ const books = [
 
 var page = -1;
 
-function product(p) {
-  window.location.href = "productPage.html";
-
-  var title = document.getElementById("bookTitle");
-  var auther = document.getElementById("bookAuther");
-  var desc = document.getElementById("bookDescription");
-  var pict1 = document.getElementById("pict1");
-  var pict2 = document.getElementById("pict2");
-  var pict3 = document.getElementById("pict3");
-  var pict4 = document.getElementById("pict4");
-
-  title.innerHTML = books[p][0] + "<br>" + books[p][1];
-  auther.innerHTML = "By: " + books[p][2];
-  desc.innerHTML = books[p][5];
-  pict1.src = books[p][6];
-  pict2.src = books[p][7];
-  pict3.src = books[p][8];
-  pict4.src = books[p][9];
+function inlarge(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
 }
 
 function search() {
