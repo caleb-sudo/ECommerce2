@@ -26,24 +26,22 @@ var bao = document.getElementById("Baoshu").checked;
 var gl = document.getElementById("GL").checked;
 
 for (var i = 0; i < tr.length; i++) {
-    for (var j = 0; j < 3; j++) {
-        var th = tr[i][j].getElementsByTagName("th")[0][0];
-        if (th) {
-            var genre = th.getElementsByClassName("genre").textContent;
-            var topic = th.getElementsByClassName("topic").textContent;
-            if (nonfict) {
-                if (genre.toUpperCase().indexOf("Non-Fiction") > -1) {
-                    tr[i][j].style.display = "";
-                } else tr[i][j].style.display = "none";
-            }
-            if (fict) {
-                if (genre.toUpperCase().indexOf("Fiction") > -1) {
-                    tr[i][j].style.display = "";
-                } else tr[i][j].style.display = "none";
-            }
-            if (allTopics) {
+    var th = tr[i].getElementsByTagName("th")[0];
+    if (th) {
+        var genre = th.getElementsByClassName("genre").textContent;
+        var topic = th.getElementsByClassName("topic").textContent;
+        if (nonfict) {
+            if (genre.toUpperCase().indexOf("Non-Fiction") > -1) {
+                tr[i].style.display = "";
+            } else tr[i].style.display = "none";
+        }
+        if (fict) {
+            if (genre.toUpperCase().indexOf("Fiction") > -1) {
                 tr[i][j].style.display = "";
-            }
+            } else tr[i][j].style.display = "none";
+        }
+        if (allTopics) {
+            tr[i].style.display = "";
         }
     }
 }
