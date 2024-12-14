@@ -163,4 +163,4 @@ function displayProducts(products) {
     }
 }
 
-displayProducts(data);
+displayProducts(booksData);
