@@ -1,8 +1,8 @@
 const ul = document.querySelector('ul');
 
-for (var i = 0; i < localStorage.length - 1; i++) {
+for (var i = 0; i < localStorage.length; i++) {
   const li = document.createElement('li');
-  var key = localStorage.key(i);
+   key = localStorage.key(i);
   li.textContent = key;
   ul.appendChild(li);
 }
