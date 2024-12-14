@@ -22,7 +22,7 @@ const data = [
   "To Sleep in a Sea Of Stars",
 ];
 
-const ul = docuement.querySelector('ul')
+const ul = docuement.querySelector('ul');
 
 for (var i = 0; i < localStorage.length; i++) {
   let itemsArray = localStorage.getItem(data[i]) ? JSON.parse(localStorage.getItem(data[i])) : [];
