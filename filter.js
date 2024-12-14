@@ -171,7 +171,7 @@ function setCategories() {
     const allCategories = data.map((product) => product.genre);
     const catagories = [
       "All",
-      ...allCategories.filter((product, index) => {
+        allCategories.filter((product, index) => {
         return allCategories.indexOf(product) === index;
       }),
     ];
@@ -187,8 +187,8 @@ function setCategories() {
   
 function setPrices() {
     const priceList = data.map((product) => product.price);
-    const minPrice = Math.min(...priceList);
-    const maxPrice = Math.max(...priceList);
+    const minPrice = Math.min(priceList);
+    const maxPrice = Math.max(priceList);
     priceRange.min = minPrice;
     priceRange.max = maxPrice;
     priceValue.textContent = "$" + maxPrice;
