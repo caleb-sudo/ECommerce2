@@ -1,4 +1,4 @@
-const booksData = [
+const data = [
     { 
         id: 1,
         name: "Quantum Supremacy",
@@ -137,78 +137,24 @@ const booksData = [
     },
 ];
 
-const productsContainer = document.querySelector(".products");
-const categoryList = document.querySelector(".category-list");
+var genre = document.getElementsByClassName("genre");
+var topics = document.getElementsByClassName("topic");
+var authors = document.getElementsByClassName("author");
 
-function displayProducts(products) {
-    if (products.length > 0) {
-        const product_details = products.map((product) => `
-            <div class="product">
-                <div class="img">
-                    <img src="${product.img}" alt="${product.name}" width="auto" height="50%">
-                </div>
-                <div class="product-details">
-                    <span class="name">
-                        ${product.name}
-                    </span>
-                    <span class="amt">
-                        $${product.price}
-                    </span>
-                </div>
-                <button onclick="localStorage.setItem('${product.name}', 1);alert('${product.name} has been added to your cart');">
-                    Add to Cart
-                </button>
-            </div>
-        `).join("");
-  
-      productsContainer.innerHTML = product_details;
-    } else {
-      productsContainer.innerHTML = "<h3>No Products Available</h3>";
+function filterFict(g, c) {
+    for (var i = 0; i < genre.length; i++) {
+        
     }
 }
 
-function setCategories() {
-    const allCategories = data.map((product) => product.genre);
-    const catagories = [
-      "All",
-        allCategories.filter((product, index) => {
-        return allCategories.indexOf(product) === index;
-      }),
-    ];
-    categoryList.innerHTML = catagories.map((catagory) => `<li>${catagory}</li>`).join("");
-  
-    categoryList.addEventListener("click", (e) => {
-      const selectedCatagory = e.target.textContent;
-      selectedCatagory === "All" ? displayProducts(data) : displayProducts(data.filter((product) => product.genre == selectedCatagory));
-    });
-  }
-  const priceRange = document.querySelector("#priceRange");
-  const priceValue = document.querySelector(".priceValue");
-  
-function setPrices() {
-    const priceList = data.map((product) => product.price);
-    const minPrice = Math.min(priceList);
-    const maxPrice = Math.max(priceList);
-    priceRange.min = minPrice;
-    priceRange.max = maxPrice;
-    priceValue.textContent = "$" + maxPrice;
-  
-    priceRange.addEventListener("input", (e) => {
-        priceValue.textContent = "$" + e.target.value;
-        displayProducts(data.filter((product) => product.price <= e.target.value));
-    });
-}
-  
-const txtSearch = document.querySelector("#txtSearch");
-txtSearch.addEventListener("keyup", (e) => {
-    const value = e.target.value.toLowerCase().trim();
-    if (value) {
-        displayProducts(data.filter((product) => product.name.toLowerCase().indexOf(value) !== -1));
-    } else {
-        displayProducts(data);
-    }
-});
+function filterTopics(g, c) {
+    for (var i = 0; i < topics.length; i++) {
 
-displayProducts(booksData);
-setCategories();
-setPrices();
+    }
+}
+
+function filterAuthors(g, c) {
+    for (var i = 0; i < authors.length; i++) {
+
+    }
+}
