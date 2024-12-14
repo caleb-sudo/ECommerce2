@@ -162,3 +162,5 @@ function displayProducts(products) {
       productsContainer.innerHTML = "<h3>No Products Available</h3>";
     }
 }
+
+displayProducts(data);
