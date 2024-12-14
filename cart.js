@@ -25,3 +25,4 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 
 numofItems.textContent = localStorage.length + " items";
+total.textContent = "$" + cost;
