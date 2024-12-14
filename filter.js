@@ -143,10 +143,9 @@ const categoryList = document.querySelector(".category-list");
 function displayProducts(products) {
     if (products.length > 0) {
         const product_details = products.map((product) => `
-            <div class="card">
                 <div class="product">
                     <div class="img">
-                        <img src="${product.img}" alt="${product.name}" style="max-width: 70%; max-height: 50%;">
+                        <img src="${product.img}" alt="${product.name}" width="auto" height="50%">
                     </div>
                     <div class="product-details">
                         <span class="name">
@@ -160,7 +159,6 @@ function displayProducts(products) {
                         Add to Cart
                     </button>
                 </div>
-            </div>
         `).join("");
   
       productsContainer.innerHTML = product_details;
@@ -170,7 +168,7 @@ function displayProducts(products) {
 }
 
 function setCategories() {
-    const allCategories = data.map((product) => product.catagory);
+    const allCategories = data.map((product) => product.genre);
     const catagories = [
       "All",
       ...allCategories.filter((product, index) => {
@@ -181,7 +179,7 @@ function setCategories() {
   
     categoryList.addEventListener("click", (e) => {
       const selectedCatagory = e.target.textContent;
-      selectedCatagory === "All" ? displayProducts(data) : displayProducts(data.filter((product) => product.catagory == selectedCatagory));
+      selectedCatagory === "All" ? displayProducts(data) : displayProducts(data.filter((product) => product.genre == selectedCatagory));
     });
   }
   const priceRange = document.querySelector("#priceRange");
