@@ -210,4 +210,5 @@ txtSearch.addEventListener("keyup", (e) => {
 });
 
 displayProducts(booksData);
+setCategories();
 setPrices();
