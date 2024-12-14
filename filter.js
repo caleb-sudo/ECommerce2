@@ -143,22 +143,22 @@ const categoryList = document.querySelector(".category-list");
 function displayProducts(products) {
     if (products.length > 0) {
         const product_details = products.map((product) => `
-                <div class="product">
-                    <div class="img">
-                        <img src="${product.img}" alt="${product.name}" width="auto" height="50%">
-                    </div>
-                    <div class="product-details">
-                        <span class="name">
-                            ${product.name}
-                        </span>
-                        <span class="amt">
-                            $${product.price}
-                        </span>
-                    </div>
-                    <button onclick="localStorage.setItem('${product.name}', 1);alert('${product.name} has been added to your cart');">
-                        Add to Cart
-                    </button>
+            <div class="product">
+                <div class="img">
+                    <img src="${product.img}" alt="${product.name}" width="auto" height="50%">
                 </div>
+                <div class="product-details">
+                    <span class="name">
+                        ${product.name}
+                    </span>
+                    <span class="amt">
+                        $${product.price}
+                    </span>
+                </div>
+                <button onclick="localStorage.setItem('${product.name}', 1);alert('${product.name} has been added to your cart');">
+                    Add to Cart
+                </button>
+            </div>
         `).join("");
   
       productsContainer.innerHTML = product_details;
