@@ -26,4 +26,18 @@ var cix = document.getElementById("Cixin").checked;
 var bao = document.getElementById("Baoshu").checked;
 var gl = document.getElementById("GL").checked;
 
+function filterFict(c) {
 
+}
+
+function filterNew_Deals(c) {
+
+}
+
+function filterTopics(c) {
+
+}
+
+function filterAuthors(c) {
+    
+}
