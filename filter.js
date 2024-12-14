@@ -5,6 +5,7 @@ var nonfict = document.getElementById("Non-Fiction").checked;
 var fict = document.getElementById("Fiction").checked;
 
 var deals = document.getElementById("Deals").checked;
+var newest = document.getElementById("new").checked;
 
 var allTopics = document.getElementById("AllTopics").checked;
 var sci = document.getElementById("Science").checked;
@@ -25,25 +26,4 @@ var cix = document.getElementById("Cixin").checked;
 var bao = document.getElementById("Baoshu").checked;
 var gl = document.getElementById("GL").checked;
 
-for (var i = 0; i < tr.length; i++) {
-    for (var j = 0; j < 3; j++) {
-        var td = tr[i][j].getElementsByTagName("td")[0];
-        if (td) {
-            var genre = td[i][j].getElementsByClassName("genre").textContent;
-            var topic = td[i][j].getElementsByClassName("topic").textContent;
-            if (nonfict) {
-                if (genre.toUpperCase().indexOf("Non-Fiction") > -1) {
-                    tr[i][j].style.display = "";
-                } else tr[i][j].style.display = "none";
-            }
-            if (fict) {
-                if (genre.toUpperCase().indexOf("Fiction") > -1) {
-                    tr[i][j].style.display = "";
-                } else tr[i][j].style.display = "none";
-            }
-            if (allTopics) {
-                tr[i].style.display = "";
-            }
-        }
-    }
-}
+
