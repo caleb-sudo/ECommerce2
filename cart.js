@@ -34,3 +34,7 @@ function addTask(text){
   li.textContent = text;
   ul.appendChild(li);
 }
+
+for (var i = 0; i < localStorage.length; i++) {
+  addTask(data[i]);
+}
