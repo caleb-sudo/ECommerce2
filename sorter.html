@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="filter.js"></script>
 </head>
 <body>
   <header>
@@ -40,28 +41,764 @@
   <hr>
   <br>
   <article>
-    <div class="container">
-      <div class="sidebar">
-        <input type="text" id="txtSearch" placeholder="Search Product...">
-        <h3>
-          Category
-        </h3>
-        <ul class="category-list">
-
-        </ul>
-        <h3>Price Range</h3>
-        <div class="price">
-          <input type="range" id="priceRange">
-          <span class="priceValue">
-            100
-          </span>
-        </div>
-      </div>
-      <div class="content">
-        <div class="products"></div>
-      </div>
-    </div>
-    <script type="text/javascript" src="filter.js"></script>
+    <section>
+      <form method="get">
+        <fieldset class="filter">
+          <legend>
+            <b>
+              Filters
+            </b>
+          </legend>
+          <input type="text" id="Search" onkeyup="search()" placeholder="Search...">
+          <br>
+          <input type="checkbox" id="Non-Fiction" name="Catagory1" value="Non-Fiction" class="in" checked>
+          <label for="Non-Fiction">
+            Non-Fiction
+          </label>
+          <br>
+          <input type="checkbox" id="Fiction" name="Catagory1" value="Fiction" class="in" checked>
+          <label for="Fiction">
+            Fiction
+          </label>
+          <br>
+          <br>
+          <input type="checkbox" id="Deals" value="Deals" class="in">
+          <label for="Deals">
+            Deals
+          </label>
+          <br>
+          <input type="checkbox" id="new" value="new" class="in">
+          <label for="new">
+            New
+          </label>
+          <br>
+          <br>
+          <fieldset style="padding:5px 5px 5px 5px;">
+            <legend>
+              Topics
+            </legend>
+            <div class="topics">
+              <input type="radio" id="AllTopics" name="Topics" value="All" class="in" checked>
+              <label for="All">
+                All
+              </label>
+              <br>
+              <input type="radio" id="Science" name="Topics" value="Science" class="in">
+              <label for="Science">
+                Science
+              </label>
+              <br>
+              <input type="radio" id="Computer-Science" name="Topics" value="Computer-Science" class="in">
+              <label for="Computer-Science">
+                Computer Science
+              </label>
+              <br>
+              <input type="radio" id="Uncertainty" name="Topics" value="Uncertainty" class="in">
+              <label for="Uncertainty">
+                Uncertainty
+              </label>
+              <br>
+              <input type="radio" id="Space" name="Topics" value="Space" class="in">
+              <label for="Space">
+                Space
+              </label>
+              <br>
+              <input type="radio" id="ShortStories" name="Topics" value="ShortStories" class="in">
+              <label for="ShortStories">
+                Short Stories
+              </label>
+            </div>
+          </fieldset>
+          <br>
+          <fieldset class="authorFilter" style="padding:5px 5px 5px 5px;">
+            <legend>
+              Authors
+            </legend>
+            <input type="radio" name="Authors" value="All" id="All" class="rad" checked>
+            <label for="All">
+              All
+            </label>
+            <br>
+            <input type="radio" name="Authors" value="Michio" id="Michio" class="rad">
+            <label for="Michio">
+              Michio Kaku
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Thomas" value="Thomas" class="rad">
+            <label for="Thomas">
+              Thomas Hertog
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Neil" value="Neil" class="rad">
+            <label for="Neil">
+              Neil DeGrasse Tyson
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="don" value="don" class="rad">
+            <label for="don">
+              Donald Goldsmith
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Chris" value="Chris" class="rad">
+            <label for="Chris">
+              Chris Hadfield
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Stephen" value="Stephen" class="rad">
+            <label for="Stephen">
+              Stephen Hawking
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Leonard" value="Leonard" class="rad">
+            <label for="Leonard">
+              Leonard Mlodinow
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="BR" value="BR" class="rad">
+            <label for="BR">
+              Brian W. Kernighan & Dennis M. Ritchie
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Cixin" value="Cixin" class="rad">
+            <label for="Cixin">
+              Cixin Liu
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="Baoshu" value="Baoshu" class="rad">
+            <label for="Baoshu">
+              Baoshu
+            </label>
+            <br>
+            <input type="radio" name="Authors" id="GL" value="GL" class="rad">
+            <label for="GL">
+              Gregory Benford & Larry Niven
+            </label>
+          </fieldset>
+          <br>
+          <fieldset style="padding:5px 5px 5px 5px;">
+            <legend>
+              Prices
+            </legend>
+            <label for="minPrice">
+              min: 
+            </label>
+            <input type="number" name="minPrice" id="minPrice" min="0" max="100">
+            <br>
+            <br>
+            <label for="maxPrice">
+              max: 
+            </label>
+            <input type="number" name="maxPrice" id="maxPrice" min="0" max="100">
+          </fieldset>
+          <br>
+          <input type="reset" value="Reset" style="margin-left:38%;padding-left:20px;padding-right:20px;">
+        </fieldset>
+      </form>
+    </section>
+    <br>
+    <section class="booksSect">
+      <table class="booksTable">
+        <tr class="booksRow">
+          <td onclick="window.location.href='QS.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book1(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    Quantum Supremacy
+                  </b>
+                </span>
+                <br>
+                <span class="auther Michio">
+                  By: Michio Kaku
+                </span>
+                <br>
+                <span class="cost">
+                  $15.99
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Quantum Supremacy', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td onclick="window.location.href='OOT.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book2(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      On The Origin of Time
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Stephen">
+                  By: Stephen Hawking
+                </span>
+                <br>
+                <span class="cost">
+                  $15.99
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('On The Origin of Time', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td onclick="window.location.href='O.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book3(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Origins
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Neil">
+                  By: Neil DeGrasse Tyson
+                </span>
+                <br>
+                <span class="cost">
+                  $10.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Origins', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td onclick="window.location.href='APH.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book4(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Astrophysics for people in a hurry
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Neil">
+                  By: Neil DeGrasse Tyson
+                </span>
+                <br>
+                <span class="cost">
+                  $15.99
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Astrophysics for people in a hurry', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book Space" onclick="window.location.href='AGL.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Space">
+                Space
+              </span>
+              <br>
+              <br>
+              <img src="resources/book5(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      An Astronaut's Guide to Life
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Chris">
+                  By: Chris Hadfield
+                </span>
+                <br>
+                <span class="cost">
+                  $10.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('An Astronauts Guide to Life', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td onclick="window.location.href='TGD.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book6(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      The Grand Design
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Stephen">
+                  By: Stephen Hawking
+                </span>
+                <br>
+                <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                  $18.00 
+                </span>
+                <span style="font-size:20px">
+                  $9.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The Grand Design', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td onclick="window.location.href='LFA.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book7(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Letters From an Astrophysicsist
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Neil">
+                  By: Neil DeGrasse Tyson
+                </span>
+                <br>
+                <span class="cost">
+                  $25.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Letters From an Astrophysicist', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td onclick="window.location.href='BABQ.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic Science">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book8(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Breif Answers, Big Questions
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Non-Fiction">
+                  By: Stephen Hawking
+                </span>
+                <br>
+                <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                  $60.00 
+                </span>
+                <span style="font-size:20px">
+                  $45.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Breif Answers, Big Questions', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book Computer-Science" onclick="window.location.href='TCL.html';">
+            <div class="card">
+              <span class="genre Non-Fiction">
+                Non-Fiction
+              </span>
+              <span class="topic CompSci">
+                Computer Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book9(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      The C Programming Language
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Brian_Ritchie">
+                  By: Brian W. Kernighan & Dennis M. Ritchie
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The C Programming Language', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td class="book Uncertainty" onclick="window.location.href='TBP.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Uncertainty">
+                Uncertainty
+              </span>
+              <br>
+              <br>
+              <img src="resources/book10(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      The Three Body Problem Trilogy
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Cixin">
+                  By: Cixin Liu
+                </span>
+                <br>
+                <span class="cost">
+                  $60.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The Three Body Problem Trilogy', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book Uncertainty" onclick="window.location.href='SE.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Uncertainty">
+                Uncertainty
+              </span>
+              <br>
+              <br>
+              <img src="resources/book11(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      Supernove Era
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Cixin">
+                  By: Cixin Liu
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Supernova Era', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book Uncertainty" onclick="window.location.href='BL.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Uncertainty">
+                Uncertainty
+              </span>
+              <br>
+              <br>
+              <img src="resources/book12(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      Ball Lightning
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Cixin">
+                  By: Cixin Liu
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Ball Lightning', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td class="book ShortStories" onclick="window.location.href='HUTS.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Short">
+                Short Stories
+              </span>
+              <br>
+              <br>
+              <img src="resources/book13(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      To Hold Up The Sky
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Cixin">
+                  By: Cixin Liu
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('To Hold Up The Sky', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book ShortStories" onclick="window.location.href='TWE.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Short">
+                Short Stories
+              </span>
+              <br>
+              <br>
+              <img src="resources/book14(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      The Wandering Earth
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Cixin">
+                  By: Cixin Liu
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The Wandering Earth', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book Uncertainty" onclick="window.location.href='ROT.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Uncertainty">
+                Uncertainty
+              </span>
+              <br>
+              <br>
+              <img src="resources/book15(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      The Redemtion of Time
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Baoshu">
+                  By: Baoshu
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The Redemtion of Time', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td class="book Space" onclick="window.location.href='BHS.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Space">
+                Space
+              </span>
+              <br>
+              <br>
+              <br>
+              <img src="resources/book16(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      Bowl of Heaven & Shipstar
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Gregory_Larry">
+                  By: Gregory Benford & Larry Niven
+                </span>
+                <br>
+                <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                  $30.00
+                </span>
+                <span style="font-size:20px">
+                    $15.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Bowl of Heaven & Shipstar', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book Space" onclick="window.location.href='G.html';">
+            <div class="card">
+              <span class="genre Fiction">
+                Fiction
+              </span>
+              <span class="topic Space">
+                Space
+              </span>
+              <br>
+              <br>
+              <img src="resources/book17(1).jpg" style="max-width: 70%; max-height: 50%;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    <a>
+                      Glorious
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Gregory_Larry">
+                  By: Gregory Benford & Larry Niven
+                </span>
+                <br>
+                <span class="cost">
+                  $15.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Glorious', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+            
+          </td>
+        </tr>
+      </table>
+    </section>
     <br>
   </article>
   <footer>
