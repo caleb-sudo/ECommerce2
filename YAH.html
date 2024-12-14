@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            The C Programming Language
+            You Are Here: Around the World in 92 Minutes 
         </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,40 +37,44 @@
         </nav>
         <hr>
         <br>
-            <div class="pictures" onclick="Increase()">
-                <table>
-                    <tr>
-                        <th>
-                            <img src="resources/book9(1).jpg" id="pict1" width="auto" height="700px">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img src="resources/book9(2).jpg" id="pict2" width="100px" height="100px">
-                        </th>
-                        <th>
-                            <img src="resources/book9(3).jpg" id="pict3" width="100px" height="100px">
-                        </th>
-                        <th>
-                            <img src="resources/book9(4).jpg" id="pict4" width="100px" height="100px">
-                        </th>
-                    </tr>
-                </table>
-            </div>
+        <div class="row">
+          <div class="column">
+            <img src="resources/book18(1).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+          <div class="column">
+            <img src="resources/book18(2).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+          <div class="column">
+            <img src="resources/book18(3).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+          <div class="column">
+            <img src="resources/book18(4).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+        </div>
+        
+        <div class="container">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">
+            &times;
+        </span>
+          <img id="expandedImg" style="width:auto;height:0.1%;">
+          <div id="imgtext"></div>
+        </div>
             <fieldset class="desc">
               <div>
                 <h2 id="bookTitle">
-                    The C Programming Language
+                    You Are Here: Around the World in 92 Minutes 
                     <br>
-                    $20.00
+                    $25.00
                 </h2>
                 <h3 id="bookAuther">
-                    Brian W. Kernighan & Dennis M. Ritchie
+                    Chris Hadfield
                 </h3>
                 <hr>
-                <p id="bookDescription"></p>
+                <p id="bookDescription">
+                    
+                </p>
                 <div id="payDeliver">
-                    <button class="checkOutBtn" onclick="localStorage.setItem('The C Programming Language', '1');alert('added to your cart');">
+                    <button class="checkOutBtn" onclick="localStorage.setItem('You Are Here: Around the World in 92 Minutes ', '1');alert('added to your cart');">
                         <b>
                           Add To Cart
                         </b>
