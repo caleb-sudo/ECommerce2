@@ -21,7 +21,7 @@ main {
   position: absolute;
   text-align: center;
   border-radius: 25px;
-  transform: rotate(20deg);
+  transform: rotate(30deg);
   background-color: red;
   color: white;
 }
