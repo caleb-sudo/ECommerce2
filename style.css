@@ -61,6 +61,10 @@ h1 {
     text-align: center;
 }
 
+.container{
+    padding: 0 1rem 0 2rem;
+}
+
 .heading{
     text-align: center;
     font-size: 1.3rem;
@@ -186,6 +190,10 @@ hr {
 
 
 @media screen and (max-width: 1150px) {
+    .product-card {
+        width: 100%;
+    }
+
     .result {
         display: flex;
         flex-wrap: wrap;
@@ -297,6 +305,7 @@ hr {
   padding: none;
   float: left;
 }
+
 #imgtext {
   position: absolute;
   bottom: 15px;
@@ -453,6 +462,15 @@ header {
 
 .footerLink:hover {
   text-decoration: underline;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-right: 5%;
+  text-align: center;
+  font-family: arial;
+  padding:none;
 }
 
 .price {
