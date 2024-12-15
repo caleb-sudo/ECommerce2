@@ -33,6 +33,14 @@ function inlarge(imgs) {
   expandImg.parentElement.style.display = "block";
 }
 
+function openForm() {
+  document.getElementById("form").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("form").style.display = "none";
+}
+
 function search() {
   var input = document.getElementById("Search");
   var filter = input.value.toUpperCase();

@@ -36,6 +36,36 @@
             Cart
           </div>
         </nav>
+        <section>
+          <p>
+            Have any questions? Just phone use with 
+            <b>
+              (312) 555-7084, 
+            </b>
+            or you can Email us with 
+            <b>
+              scibook@gmail.com, 
+            </b>
+            or complete our form 
+            <a onclick="openForm()">
+              here
+            </a>
+            .
+          </p>
+        </section>
+        <div class="form-popup" id="form">
+          <label for="fname">Full name</label>
+          <input type="text" id="fname" name="fullname" placeholder="Your full name...">
+          <label for="email">Email</label>
+          <input type="email" id="emain" name="email" placeholder="Your email...">
+          <textarea id="subject" name="subject" placeholder="Write your questions or concerns here..."></textarea>
+          <button type="submit" class="btn">
+            Submit
+          </button>
+          <button class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </div>
         <br>
         <hr>
         <br>
