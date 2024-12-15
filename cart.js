@@ -1,3 +1,7 @@
+function reload() {
+  location.reload();
+}
+
 const ul = document.querySelector('ul');
 var numofItems = document.getElementById("numOfItems");
 var total = document.getElementById("totalCost");
@@ -74,6 +78,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const minus = document.createElement('button');
   minus.textContent = "-";
+  minus.addEventListener("click", minusVal);
   quantChanger.appendChild(minus);
 
   const quant = document.createElement('p');
@@ -82,43 +87,39 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const plus = document.createElement('button');
   plus.textContent = "+";
+  plus.addEventListener("click", plusVal);
   quantChanger.appendChild(plus);
 
   const del = document.createElement('button');
   del.textContent = "delete";
+  del.addEventListener("click", deleteItem);
   li.appendChild(del);
 }
 
-const minusBtns = document.getElementsByClassName("minus");
-minusBtns.forEach(minusBtn => {
-  minusBtn.addEventListener("click", (e) => {
-    const minusindex = Array.from(minusBtns).indexOf(e.target);
-    location.setItem(minusindex, val--);
-    location.reload();
-  });
-});
+function minusVal() {
+  for (var i = 0; i < localStorage.length; i++) {
+    localStorage.setItem(key, val--);
+  }
+  reload();
+}
 
-const plusBtns = document.getElementsByClassName("plus");
-plusBtns.forEach(plusBtn => {
-    plusBtn.addEventListener("click", (e) => {
-      const plusindex = Array.from(plusBtns).indexOf(e.target);
-      localStorage.setItem(plusindex, val++);
-      location.reload();
-    });
-});
+function plusVal() {
+  for (var i = 0; i < localStorage.length; i++) {
+    localStorage.setItem(key, val++);
+  }
+  reload();
+}
 
-const deleteBtns = document.getElementsByClassName("deleteBtn");
-deleteBtns.forEach(deleteBtn => {
-  deleteBtn.addEventListener("click", (e) => {
-    const delIndex = Array.from(deleteBtns).indexOf(e.target);
-    localStorage.removeItem(delIndex);
-    location.reload();
-  });
-});
+function deleteItem() {
+  for (var i = 0; i < localStorage.length; i++) {
+    
+  }
+  reload();
+}
 
 function clearCart() {
   localStorage.clear();
-  location.reload();
+  reload();
 }
 
 numofItems.textContent = localStorage.length + " items";
