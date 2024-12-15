@@ -11,8 +11,12 @@ for (var i = 0; i < localStorage.length; i++) {
 
   li.classList.add("cart-item");
 
-  li.textContent = key;
+  li.textContent = key + "\f01b";
   ul.appendChild(li);
+
+  const items = document.getElementsByClassName("cart-item");
+
+  
 
   switch (key) {
     case "Quantum Supremacy":
