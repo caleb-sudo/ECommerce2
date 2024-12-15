@@ -17,7 +17,6 @@ for (var i = 0; i < localStorage.length; i++) {
   div.appendChild(title);
 
   const quantity = document.createElement('p');
-  quantity.textContent = arr[1][i];
   div.appendChild(quantity);
 
   const del = document.createElement('span');
