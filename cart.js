@@ -15,7 +15,7 @@ for (var i = 0; i < localStorage.length; i++) {
   ul.appendChild(li);
 
   const quant = document.createElement('p');
-  
+  quant.textContent = "hello";
   li.appendChild(quant);
 
   switch (key) {
