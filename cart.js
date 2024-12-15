@@ -96,20 +96,20 @@ for (var i = 0; i < localStorage.length; i++) {
 function minusVal() {
   for (var i = 0; i < localStorage.length; i++) {
     localStorage.setItem(key, val--);
-    reload();
   }
+  reload();
 }
 
 function plusVal() {
   for (var i = 0; i < localStorage.length; i++) {
     localStorage.setItem(key, val++);
-    reload();
   }
+  reload();
 }
 
 function deleteItem() {
   for (var i = 0; i < localStorage.length; i++) {
-
+    
   }
   reload();
 }
