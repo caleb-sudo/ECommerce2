@@ -66,7 +66,8 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.checkOutBtn {
+.checkOutBtn,
+.buy-btn {
     background-color: #ffd84d;
     color: rgb(60, 60, 60);
     padding: 0.6rem 1rem;
@@ -79,7 +80,8 @@ h1 {
     font-size: 0.9rem;
 }
 
-.checkOutBtn:hover {
+.checkOutBtn:hover,
+.buy-btn:hover {
     background-color: #fbcc24;
     transform: translateY(2px);
 }
@@ -111,6 +113,10 @@ h1 {
   font-size: 15px;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 .active,
 .collapsible:hover {
   background-color: #555;
@@ -121,6 +127,7 @@ h1 {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  word-wrap: break-word;
 }
 
 hr {
@@ -167,14 +174,6 @@ hr {
     background-color: rgb(203, 203, 203);
     border-radius: 0.3rem;
     margin: 0 0.5rem;
-}
-
-.buy-btn {
-    width: 100%;
-    padding: 0.8rem 0;
-    margin: 0;
-    margin-top: 1.5rem;
-    border-radius: 0.2rem;
 }
 
 .footer{

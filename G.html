@@ -37,7 +37,7 @@
         </nav>
         <hr>
         <br>
-            <div class="pictures" onclick="Increase()">
+            <div class="pictures" onclick="Increase();">
                 <table>
                     <tr>
                         <th>
@@ -65,20 +65,50 @@
                     $15.00
                 </h2>
                 <h3 id="bookAuther">
-                    Gregory Benford & Larry Niven
+                    By: Gregory Benford & Larry Niven
                 </h3>
                 <hr>
-                <p id="bookDescription"></p>
+                <p id="bookDescription">
+                  Audacious astronauts encounter bizarre, sometimes deadly life forms, and strange, exotic, cosmic phenomena, including miniature black holes, dense 
+                  fields of interstellar plasma, powerful gravity-emitters, and spectacularly massive space-based, alien-built labyrinths.
+                  <br>
+                  <br>
+                  Tasked with exploring this brave, new, highly dangerous world, they must also deal with their own personal triumphs and conflicts.
+                </p>
                 <div id="payDeliver">
                     <button class="checkOutBtn" onclick="localStorage.setItem('Glorious', '1');alert('added to your cart');">
                         <b>
                           Add To Cart
                         </b>
                     </button>
+                    <button class="buy-btn" onclick="checkOutClicked();">
+                      <b>
+                        Buy Now
+                      </b>
+                    </button>
                 </div>
               </div>
             </fieldset>
-              <script src="script.js"></script>
+            <div class="paymentForm" id="checkOutForm">
+              <div class="paymentForm-container">
+                <h2>
+                  Select your payment method
+                </h2>
+                <button class="btn" onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+                  <i class="fa fa-paypal" style="color:blue;"></i>
+                  Paypal
+                </button>
+                <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+                  <i class="fa fa-credit-card" style="color:black;"></i>
+                  Credit Card
+                </button>
+                <button class="btn cancel" onclick="checkOutCanceled();">
+                  Cancel
+                </button>
+              </div>
+            </div>
+            <script src="cart.js"></script>
+            <script src="script.js"></script>
         <footer>
 
         </footer>

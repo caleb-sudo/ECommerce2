@@ -37,7 +37,7 @@
         </nav>
         <hr>
         <br>
-            <div class="pictures" onclick="Increase()">
+            <div class="pictures" onclick="Increase();">
                 <table>
                     <tr>
                         <th>
@@ -65,21 +65,26 @@
                     $20.00
                 </h2>
                 <h3 id="bookAuther">
-                    Cixin Liu
+                    By: Cixin Liu
                 </h3>
                 <hr>
                 <p id="bookDescription">
                   In those days, Earth was a planet in space.
-
+                  <br>
+                  <br>
                   In those days, Beijing was a city on Earth.
-
+                  <br>
+                  <br>
                   On this night, history as known to humanity came to an end.
-
+                  <br>
+                  <br>
                   Eight light years away, a star has died, creating a supernova event that showers Earth in deadly levels of radiation. 
                   Within a year, everyone over the age of 13 will die.
-
+                  <br>
+                  <br>
                   And so the countdown begins. Parents apprentice their children and try to pass on the knowledge needed to keep the world running.
-
+                  <br>
+                  <br>
                   But when the world is theirs, the last generation may not want to continue the legacy left to them. And in shaping the future 
                   however they want, will the children usher in an era of bright beginnings or final mistakes?
                 </p>
@@ -89,10 +94,34 @@
                           Add To Cart
                         </b>
                     </button>
+                    <button class="buy-btn" onclick="checkOutClicked();">
+                      <b>
+                        Buy Now
+                      </b>
+                    </button>
                 </div>
               </div>
             </fieldset>
-              <script src="script.js"></script>
+            <div class="paymentForm" id="checkOutForm">
+              <div class="paymentForm-container">
+                <h2>
+                  Select your payment method
+                </h2>
+                <button class="btn" onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+                  <i class="fa fa-paypal" style="color:blue;"></i>
+                  Paypal
+                </button>
+                <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+                  <i class="fa fa-credit-card" style="color:black;"></i>
+                  Credit Card
+                </button>
+                <button class="btn cancel" onclick="checkOutCanceled();">
+                  Cancel
+                </button>
+              </div>
+            </div>
+            <script src="cart.js"></script>
+            <script src="script.js"></script>
         <footer>
 
         </footer>

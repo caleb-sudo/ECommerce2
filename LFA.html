@@ -37,7 +37,7 @@
         </nav>
         <hr>
         <br>
-            <div class="pictures" onclick="Increase()">
+            <div class="pictures" onclick="Increase();">
                 <table>
                     <tr>
                         <th>
@@ -65,20 +65,50 @@
                     $25.00
                 </h2>
                 <h3 id="bookAuther">
-                    Neil DeGrasse Tyson
+                    By: Neil DeGrasse Tyson
                 </h3>
                 <hr>
-                <p id="bookDescription"></p>
+                <p id="bookDescription">
+                  Astrophysicist Neil deGrasse Tyson has attracted one of the world`s largest online followings with his fascinating, widely accessible insights 
+                  into science and our universe. Now, Tyson invites us to go behind the scenes of his public fame by revealing his correspondence with people across 
+                  the globe who have sought him out in search of answers. In this hand-picked collection of 101 letters, Tyson draws upon cosmic perspectives to address 
+                  a vast array of questions about science, faith, philosophy, life, and of course, Pluto. His succinct, opinionated, passionate, and often funny 
+                  responses reflect his popularity and standing as a leading educator.
+                </p>
                 <div id="payDeliver">
                     <button class="checkOutBtn" onclick="localStorage.setItem('Letters from an Astrophysicist', '1');alert('added to your cart');">
                         <b>
                           Add To Cart
                         </b>
                     </button>
+                    <button class="buy-btn" onclick="checkOutClicked();">
+                      <b>
+                        Buy Now
+                      </b>
+                    </button>
                 </div>
               </div>
             </fieldset>
-              <script src="script.js"></script>
+            <div class="paymentForm" id="checkOutForm">
+              <div class="paymentForm-container">
+                <h2>
+                  Select your payment method
+                </h2>
+                <button class="btn" onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+                  <i class="fa fa-paypal" style="color:blue;"></i>
+                  Paypal
+                </button>
+                <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+                  <i class="fa fa-credit-card" style="color:black;"></i>
+                  Credit Card
+                </button>
+                <button class="btn cancel" onclick="checkOutCanceled();">
+                  Cancel
+                </button>
+              </div>
+            </div>
+            <script src="cart.js"></script>
+            <script src="script.js"></script>
         <footer>
 
         </footer>
