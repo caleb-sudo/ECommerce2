@@ -525,3 +525,8 @@ header {
   opacity: 1;
 }
 
+.plus,
+.minus {
+  border: none;
+  border-radius: 25px;
+}

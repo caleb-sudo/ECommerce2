@@ -1,7 +1,3 @@
-function reload() {
-  location.reload();
-}
-
 const ul = document.querySelector('ul');
 var numofItems = document.getElementById("numOfItems");
 var total = document.getElementById("totalCost");
@@ -89,41 +85,45 @@ for (var i = 0; i < localStorage.length; i++) {
   const plus = document.createElement('button');
   plus.classList.add("plus");
   plus.textContent = "+";
-  plus.addEventListener("click", plusVal);
   quantChanger.appendChild(plus);
 
   const del = document.createElement('button');
+  del.classList.add("deleteBtn");
   del.textContent = "delete";
   del.addEventListener("click", deleteItem);
   li.appendChild(del);
 }
 
-function minusVal() {
-  for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-    localStorage.setItem(key, val--);
-  }
-  reload();
-}
+const minusBtns = document.getElementsByClassName("minus");
+minusBtns.forEach(minusBtn => {
+  minus.addEventListener("click", (e) => {
+    const minusindex = Array.from(minusBtns).indexOf(e.target);
+    location.setItem(minusindex, val--);
+    location.reload();
+  });
+});
 
-function plusVal() {
-  for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-    localStorage.setItem(key, val++);
-  }
-  reload();
-}
+const plusBtns = document.getElementsByClassName("plus");
+plusBtns.forEach(plusBtn => {
+    plus.addEventListener("click", (e) => {
+      const plusindex = Array.from(plusBtns).indexOf(e.target);
+      localStorage.setItem(plusindex, val++);
+      location.reload();
+    });
+});
 
-function deleteItem() {
-  for (var i = 0; i < localStorage.length; i++) {
-    var key = localStorage.key(i);
-  }
-  reload();
-}
+const deleteBtns = document.getElementsByClassName("deleteBtn");
+deleteBtns.forEach(deleteBtn => {
+  del.addEventListener("click", (e) => {
+    const delIndex = Array.from(deleteBtns).indexOf(e.target);
+    localStorage.removeItem(delIndex);
+    location.reload();
+  });
+});
 
 function clearCart() {
   localStorage.clear();
-  reload();
+  location.reload();
 }
 
 numofItems.textContent = localStorage.length + " items";
