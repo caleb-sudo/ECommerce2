@@ -543,4 +543,5 @@ header {
 .cancel,
 .btn .cancel {
   background-color: red;
+  font-size: xx-large;
 }
