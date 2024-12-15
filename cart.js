@@ -20,8 +20,6 @@ for (var i = 0; i < localStorage.length; i++) {
   div.appendChild(quantity);
 
   const del = document.createElement('span');
-  del.classList.add("fa fa-remove");
-  del.onclick = localStorage.removeItem(this);
   div.appendChild(del);
 
   li.appendChild(div);
