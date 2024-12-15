@@ -91,7 +91,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
 const minusBtns = document.getElementsByClassName("minus");
 minusBtns.forEach(minusBtn => {
-  minus.addEventListener("click", (e) => {
+  minusBtn.addEventListener("click", (e) => {
     const minusindex = Array.from(minusBtns).indexOf(e.target);
     location.setItem(minusindex, val--);
     location.reload();
@@ -100,7 +100,7 @@ minusBtns.forEach(minusBtn => {
 
 const plusBtns = document.getElementsByClassName("plus");
 plusBtns.forEach(plusBtn => {
-    plus.addEventListener("click", (e) => {
+    plusBtn.addEventListener("click", (e) => {
       const plusindex = Array.from(plusBtns).indexOf(e.target);
       localStorage.setItem(plusindex, val++);
       location.reload();
@@ -109,7 +109,7 @@ plusBtns.forEach(plusBtn => {
 
 const deleteBtns = document.getElementsByClassName("deleteBtn");
 deleteBtns.forEach(deleteBtn => {
-  del.addEventListener("click", (e) => {
+  deleteBtn.addEventListener("click", (e) => {
     const delIndex = Array.from(deleteBtns).indexOf(e.target);
     localStorage.removeItem(delIndex);
     location.reload();
