@@ -468,7 +468,7 @@ header {
   font-size: 18px;
 }
 
-.paymentForm,
+#paymentForm,
 .form-popup {
   display: none;
   position: fixed;
@@ -478,9 +478,7 @@ header {
   z-index: 9;
 }
 
-.paymentForm-container {
-  max-width: 1000px;
-}
+.paymentForm-container,
 .form-container {
   max-width: 300px;
   padding: 10px;
