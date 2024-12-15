@@ -9,19 +9,6 @@ for (var i = 0; i < localStorage.length; i++) {
   var val = localStorage.getItem(key);
   const li = document.createElement('li');
 
-  li.classList.add("cart-item");
-
-  li.textContent = key;
-  ul.appendChild(li);
-
-  const itemCost = document.createElement('p');
-  itemCost.textContent = "$" + price + ".00";
-  li.appendChild(itemCost);
-
-  const quant = document.createElement('p');
-  quant.textContent = val;
-  li.appendChild(quant);
-
   switch (key) {
     case "Quantum Supremacy":
       case "On The Origin of Time":
@@ -72,6 +59,19 @@ for (var i = 0; i < localStorage.length; i++) {
                   cost += price;
                   break;
   }
+
+  li.classList.add("cart-item");
+
+  li.textContent = key;
+  ul.appendChild(li);
+
+  const itemCost = document.createElement('p');
+  itemCost.textContent = "$" + price + ".00";
+  li.appendChild(itemCost);
+
+  const quant = document.createElement('p');
+  quant.textContent = val;
+  li.appendChild(quant);
 }
 
 numofItems.textContent = localStorage.length + " items";
