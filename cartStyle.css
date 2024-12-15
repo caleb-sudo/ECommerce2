@@ -77,11 +77,6 @@
     border: 1px solid lightgrey;
   }
   
-  span.price {
-    float: right;
-    color: grey;
-  }
-  
 @media (max-width: 800px) {
     .row {
       flex-direction: column-reverse;
