@@ -503,8 +503,9 @@ header {
   font-size: 18px;
 }
 
+.paymentForm,
 .form-popup {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 0;
   right: 15px;
@@ -512,6 +513,7 @@ header {
   z-index: 9;
 }
 
+.paymentForm-container,
 .form-container {
   max-width: 300px;
   padding: 10px;
@@ -546,6 +548,7 @@ header {
   background-color: red;
 }
 
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, 
+.open-button:hover {
   opacity: 1;
 }
