@@ -61,14 +61,26 @@
           </h4>
           <p id="totalCost"></p>
         </div>
-        <button class="buy-btn checkOutBtn">
+        <button class="buy-btn checkOutBtn" onclick="checkOutClicked()">
           Check out
         </button>
       </div>
     </div>
-    <div class="paymentForm-popup">
+    <div class="paymentForm">
       <div class="paymentForm-container">
-        
+        <h2>
+          Select your payment method
+        </h2>
+        <button class="btn" onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+          <i class="fa fa-paypal" style="color:blue;"></i>
+          Paypal
+        </button>
+        <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+          Credit Card
+        </button>
+        <button class="btn cancel" onclick="checkOutCanceled()">
+          Cancel
+        </button>
       </div>
     </div>
     <script src="cart.js"></script>
