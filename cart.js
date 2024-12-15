@@ -76,14 +76,6 @@ for (var i = 0; i < localStorage.length; i++) {
   const quant = document.createElement('p');
   quant.textContent = val;
   li.appendChild(quant);
-
-  const plus = document.createElement('i');
-  plus.classList.add("fas fa-plus-circle");
-  li.appendChild(plus);
-
-  const del = document.createElement('i');
-  del.classList.add("fas fa-trash");
-  li.appendChild(del);
 }
 
 numofItems.textContent = localStorage.length + " items";
