@@ -129,9 +129,9 @@ const checkOut = document.getElementsByClassName("buy-btn");
 checkOut.addEventListener("click", checkOutClicked);
 
 function checkOutClicked() {
-  document.getElementById("paymentForm").style.display = "block";
+  document.getElementById("checkOutForm").style.display = "block";
 }
 
 function checkOutCanceled() {
-  document.getElementById("paymentForm").style.display = "none";
+  document.getElementById("checkOutForm").style.display = "none";
 }

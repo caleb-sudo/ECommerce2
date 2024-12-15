@@ -468,7 +468,7 @@ header {
   font-size: 18px;
 }
 
-#paymentForm,
+.paymentForm,
 .form-popup {
   display: none;
   position: fixed;
