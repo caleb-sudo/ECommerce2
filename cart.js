@@ -22,7 +22,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const del = document.createElement('span');
   del.classList.add("fa fa-remove");
-  del.onclick = localStorage.remove(this);
+  del.onclick = localStorage.removeItem(this);
   div.appendChild(del);
 
   li.appendChild(div);
