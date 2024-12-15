@@ -73,19 +73,22 @@ for (var i = 0; i < localStorage.length; i++) {
   itemCost.textContent = "$" + price + ".00";
   li.appendChild(itemCost);
 
+  const quantChanger = document.createElement('div');
+  li.appendChild(quantChanger);
+
   const minus = document.createElement('button');
   minus.textContent = "-";
   minus.addEventListener("click", minusVal);
-  li.appendChild(minus);
+  quantChanger.appendChild(minus);
 
   const quant = document.createElement('p');
   quant.textContent = val;
-  li.appendChild(quant);
+  quantChanger.appendChild(quant);
 
   const plus = document.createElement('button');
   plus.textContent = "+";
   plus.addEventListener("click", plusVal);
-  li.appendChild(plus);
+  quantChanger.appendChild(plus);
 
   const del = document.createElement('button');
   del.textContent = "delete";
