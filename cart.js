@@ -14,9 +14,9 @@ for (var i = 0; i < localStorage.length; i++) {
   li.textContent = key;
   ul.appendChild(li);
 
-  const items = document.getElementsByClassName("cart-item");
-
+  const quant = document.createElement('p');
   
+  li.appendChild(quant);
 
   switch (key) {
     case "Quantum Supremacy":
