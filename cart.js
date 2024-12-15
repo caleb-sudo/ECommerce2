@@ -1,3 +1,7 @@
+function reload() {
+  location.reload();
+}
+
 const ul = document.querySelector('ul');
 var numofItems = document.getElementById("numOfItems");
 var total = document.getElementById("totalCost");
@@ -92,12 +96,14 @@ for (var i = 0; i < localStorage.length; i++) {
 function minusVal() {
   for (var i = 0; i < localStorage.length; i++) {
     localStorage.setItem(key, val--);
+    reload();
   }
 }
 
 function plusVal() {
   for (var i = 0; i < localStorage.length; i++) {
     localStorage.setItem(key, val++);
+    reload();
   }
 }
 
@@ -105,10 +111,12 @@ function deleteItem() {
   for (var i = 0; i < localStorage.length; i++) {
 
   }
+  reload();
 }
 
 function clearCart() {
   localStorage.clear();
+  reload();
 }
 
 numofItems.textContent = localStorage.length + " items";
