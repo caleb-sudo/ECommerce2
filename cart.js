@@ -7,6 +7,7 @@ var cost = 0;
 
 for (var i = 0; i < localStorage.length; i++) {
   var key = localStorage.key(i);
+  var val = localStorage.getItem(key);
   const li = document.createElement('li');
 
   li.classList.add("cart-item");
@@ -15,7 +16,7 @@ for (var i = 0; i < localStorage.length; i++) {
   ul.appendChild(li);
 
   const quant = document.createElement('p');
-  quant.textContent = "hello";
+  quant.textContent = val;
   li.appendChild(quant);
 
   switch (key) {
