@@ -513,7 +513,9 @@ header {
   z-index: 9;
 }
 
-.paymentForm-container,
+.paymentForm-container {
+  max-width: 1000px;
+}
 .form-container {
   max-width: 300px;
   padding: 10px;
