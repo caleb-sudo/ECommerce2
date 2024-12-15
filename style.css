@@ -242,12 +242,6 @@ hr {
   padding: 10px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .items {
   float: left;
 }
@@ -288,12 +282,6 @@ hr {
   margin: none;
 }
 
-.row {
-  margin: none;
-  padding: none;
-  float: left;
-}
-
 .column {
   float: left;
   width: 25%;
@@ -307,15 +295,6 @@ hr {
 
 .column img:hover {
   opacity: 1;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  margin: none;
-  padding: none;
-  float: left;
 }
 
 .container {
