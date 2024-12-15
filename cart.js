@@ -6,8 +6,26 @@ var total = document.getElementById("totalCost");
 var cost = 0;
 
 for (var i = 0; i < localStorage.length; i++) {
-  const li = document.createElement('li');
   var key = localStorage.key(i);
+  const li = document.createElement('li');
+  const div = document.createElement('div');
+
+  div.classList.add("cart-item");
+
+  const title = document.createElement('h3');
+  title.textContent = key;
+  div.appendChild(title);
+
+  const quantity = document.createElement('p');
+  quantity.textContent = arr[i][1];
+  div.appendChild(quantity);
+
+  const del = document.createElement('span');
+  del.classList.add("fa fa-remove");
+  del.onclick = localStorage.remove(this);
+  div.appendChild(del);
+
+  li.appendChild(div);
   li.textContent = key;
   li.style.display = 'flex';
   ul.appendChild(li);
@@ -21,6 +39,39 @@ for (var i = 0; i < localStorage.length; i++) {
               case "To Sleep in a Sea Of Stars":
                 cost += 15;
                 break;
+
+    case "Origins":
+      case "An Astronaut's Guide to Life":
+        cost += 10;
+        break;
+
+    case "The Grand Design":
+      cost += 9;
+      break;
+    
+    case "Letters From an Astrophysicsist":
+      case "You Are Here: Around the World in 92 Minutes":
+        case "The Apollo Murders":
+          cost += 25;
+          break;
+    
+    case "The Three Body Problem Trilogy":
+      cost += 60;
+      break;
+
+    case "Breif Answers, Big Questions":
+      cost += 40;
+      break;
+    
+    case "The C Programming Language":
+      case "Molecules: The Elements and the Architecture of Everything":
+        case "Supernove Era":
+          case "Ball Lightning":
+            case "To Hold Up The Sky":
+              case "The Wandering Earth":
+                case "The Redemtion of Time":
+                  cost += 20;
+                  break;
   }
 }
 
