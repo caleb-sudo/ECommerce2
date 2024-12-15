@@ -1,97 +1,147 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            SciBooks Contact
-        </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="script.js" defer></script>
-        <style>
-          input[type=text], input[type=email], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-        </style>
-    </head>
-    <body>
-        <header>
-          <div class="headTitle">
-            <p>
-              <b>
-                <span style="color:blue;">
-                  Sci
-                </span>
-                <span style="color:green;">
-                  Books
-                </span>
-              </b>
-            </p>
-          </div>
-        </header>
-        <nav class="stick">
-          <div class="menu fa fa-home" onclick="window.location.href='index.html';">
-            Home
-          </div>
-          <div class="menu fa fa-search" onclick="window.location.href='sorter.html';">
-            Lookup
-          </div>
-          <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
-            Cart
-          </div>
-        </nav>
-        <section>
-          <p>
-            Have any questions or concerns? Just phone use with 
+
+<head>
+  <title>
+    SciBooks Contact
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="script.js" defer></script>
+  <style>
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="headTitle">
+      <h2>
+        <b>
+          <span style="color:blue;">
+            Sci
+          </span>
+          <span style="color:green;">
+            Books
+          </span>
+        </b>
+      </h2>
+      <span style="text-align:right;">
+        <i class="icon fa fa-github-square" style="color:black;"
+          onclick="window.location.href='https://github.com/caleb-sudo';"></i>
+        <i class="icon fa fa-youtube-play" style="color:red;"></i>
+        <i class="icon fa fa-twitter" style="color:aqua;"></i>
+        <i class="icon fa fa-facebook-square" style="color:blue;"></i>
+      </span>
+    </div>
+  </header>
+  <nav class="stick">
+    <div class="menu fa fa-home" onclick="window.location.href='index.html';">
+      Home
+    </div>
+    <div class="menu fa fa-search" onclick="window.location.href='sorter.html';">
+      Lookup
+    </div>
+    <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
+      Cart
+    </div>
+  </nav>
+  <section>
+    <p>
+      Have any questions or concerns? Just phone use with
+      <b>
+        <i class="glyphicon glyphicon-phone"></i>
+        (312) 555-7084,
+      </b>
+      or you can Email us with
+      <b>
+        <i class="glyphicon glyphicon-envelope"></i>
+        <a href="mailto: someone@gmail.com">
+          scibooks@gmail.com
+        </a>
+      </b>
+      or complete our form
+      <a onclick="openForm()" style="cursor:pointer;">
+        here
+      </a>
+      .
+    </p>
+  </section>
+  <div class="form-popup" id="form" aria-required="true">
+    <div class="form-container">
+      <label for="fname">
+        Full name
+      </label>
+      <input type="text" id="fname" name="fullname" placeholder="Your full name..." required aria-required="true">
+      <label for="email">
+        Email
+      </label>
+      <input type="email" id="emain" name="email" placeholder="Your email...">
+      <textarea id="subject" name="subject" placeholder="Write your questions or concerns here..." required
+        aria-required="true"></textarea>
+      <button type="submit" class="btn">
+        Submit
+      </button>
+      <button class="btn cancel" onclick="closeForm()">
+        Close
+      </button>
+    </div>
+
+  </div>
+  <br>
+  <hr>
+  <footer>
+    <div style="margin-left:49%;">
+      <ul style="text-align:center;">
+        <li style="display:flex;">
+          <a href="questions.html" class="footerLink">
             <b>
-              <i class="glyphicon glyphicon-phone"></i>
-              (312) 555-7084, 
+              Frequently Asked Questions
             </b>
-            or you can Email us with 
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="contacts.html" class="footerLink">
             <b>
-              <i class="glyphicon glyphicon-envelope"></i>
-              <a href="mailto: someone@gmail.com">
-                scibooks@gmail.com
-              </a>
+              Contacts
             </b>
-            or complete our form 
-            <a onclick="openForm()" style="cursor:pointer;">
-              here
-            </a>
-            .
-          </p>
-        </section>
-        <div class="form-popup" id="form" aria-required="true">
-          <div class="form-container">
-            <label for="fname">
-              Full name
-            </label>
-            <input type="text" id="fname" name="fullname" placeholder="Your full name..." required aria-required="true">
-            <label for="email">
-              Email
-            </label>
-            <input type="email" id="emain" name="email" placeholder="Your email...">
-            <textarea id="subject" name="subject" placeholder="Write your questions or concerns here..." required aria-required="true"></textarea>
-            <button type="submit" class="btn">
-              Submit
-            </button>
-            <button class="btn cancel" onclick="closeForm()">
-              Close
-            </button>
-          </div>
-          
-        </div>
-        <br>
-        <hr>
-        <br>
-    </body>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="security.html" class="footerLink">
+            <b>
+              Security
+            </b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <h2>
+      <span style="color:blue;">
+        Sci
+      </span>
+      <span style="color:green;">
+        Books
+      </span>
+    </h2>
+  </footer>
+</body>
+
 </html>

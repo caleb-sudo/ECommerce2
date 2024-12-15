@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>
     SciBooks sorter
@@ -11,10 +12,11 @@
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="filter.js"></script>
 </head>
+
 <body>
   <header>
     <div class="headTitle">
-      <p>
+      <h2>
         <b>
           <span style="color:blue;">
             Sci
@@ -23,7 +25,14 @@
             Books
           </span>
         </b>
-      </p>
+      </h2>
+      <span style="text-align:right;">
+        <i class="icon fa fa-github-square" style="color:black;"
+          onclick="window.location.href='https://github.com/caleb-sudo';"></i>
+        <i class="icon fa fa-youtube-play" style="color:red;"></i>
+        <i class="icon fa fa-twitter" style="color:aqua;"></i>
+        <i class="icon fa fa-facebook-square" style="color:blue;"></i>
+      </span>
     </div>
   </header>
   <nav class="stick">
@@ -185,13 +194,13 @@
               Prices
             </legend>
             <label for="minPrice">
-              min: 
+              min:
             </label>
             <input type="number" name="minPrice" id="minPrice" min="0" max="100">
             <br>
             <br>
             <label for="maxPrice">
-              max: 
+              max:
             </label>
             <input type="number" name="maxPrice" id="maxPrice" min="0" max="100">
           </fieldset>
@@ -335,7 +344,8 @@
                   $15.99
                 </span>
               </span>
-              <button onclick="localStorage.setItem('Astrophysics for people in a hurry', 1);alert('Added to your cart');">
+              <button
+                onclick="localStorage.setItem('Astrophysics for people in a hurry', 1);alert('Added to your cart');">
                 Add to Cart
               </button>
             </div>
@@ -400,7 +410,7 @@
                 </span>
                 <br>
                 <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
-                  $18.00 
+                  $18.00
                 </span>
                 <span style="font-size:20px">
                   $9.00
@@ -473,7 +483,7 @@
                 </span>
                 <br>
                 <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
-                  $60.00 
+                  $60.00
                 </span>
                 <span style="font-size:20px">
                   $45.00
@@ -530,13 +540,13 @@
               </span>
               <br>
               <br>
-              <img src="resources/book18(1).jpg"  style="max-width: 70%; max-height: auto;">
+              <img src="resources/book18(1).jpg" style="max-width: 70%; max-height: auto;">
               <br>
               <span>
                 <span class="title">
                   <b>
                     <a>
-                      You Are Here: Around the World in 92 Minutes 
+                      You Are Here: Around the World in 92 Minutes
                     </a>
                   </b>
                 </span>
@@ -549,7 +559,8 @@
                   $25.00
                 </span>
               </span>
-              <button onclick="localStorage.setItem('You Are Here: Around the World in 92 Minutes', 1);alert('Added to your cart');">
+              <button
+                onclick="localStorage.setItem('You Are Here: Around the World in 92 Minutes', 1);alert('Added to your cart');">
                 Add to Cart
               </button>
             </div>
@@ -583,7 +594,8 @@
                   $20.00
                 </span>
               </span>
-              <button onclick="localStorage.setItem('Molecules: The Elements and the Architecture of Everything', 1);alert('Added to your cart');">
+              <button
+                onclick="localStorage.setItem('Molecules: The Elements and the Architecture of Everything', 1);alert('Added to your cart');">
                 Add to Cart
               </button>
             </div>
@@ -862,7 +874,7 @@
                   $30.00
                 </span>
                 <span style="font-size:20px">
-                    $15.00
+                  $15.00
                 </span>
               </span>
               <button onclick="localStorage.setItem('Bowl of Heaven & Shipstar', 1);alert('Added to your cart');">
@@ -944,45 +956,42 @@
     <br>
   </article>
   <footer>
-    <div style="text-align:right; padding-right:30px;">
-        <a class="footerLink">
-          <b>
-            Support
-          </b>
-        </a>
-      <br>
-        <a href="contacts.html" class="footerLink">
-          <b>
-            Contacts
-          </b>
-        </a>
-      <br>
-        <a href="security.html" class="footerLink">
-          <b>
-            Security
-          </b>
-        </a>
-      </div>
-      <div style="text-align:center">
-        <a href="questions.html" class="footerLink">
-          <b>
-            Frequently Asked Questions
-          </b>
-        </a>
-      </div>
-      <div style="text-align:left; padding-left:30px;">
-        <a>
-          <b>
-            Discord
-          </b>
-        </a>
-        <br>
-        <a>
-          <b>
-            Twitter
-          </b>
-        </a>
-      </div>
-    </footer>
-  </body>
+    <div style="margin-left:49%;">
+      <ul style="text-align:center;">
+        <li style="display:flex;">
+          <a href="questions.html" class="footerLink">
+            <b>
+              Frequently Asked Questions
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="contacts.html" class="footerLink">
+            <b>
+              Contacts
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="security.html" class="footerLink">
+            <b>
+              Security
+            </b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <h2>
+      <span style="color:blue;">
+        Sci
+      </span>
+      <span style="color:green;">
+        Books
+      </span>
+    </h2>
+  </footer>
+</body>
+
 </html>

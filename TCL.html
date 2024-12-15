@@ -1,110 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            The C Programming Language
-        </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <header>
-          <div class="headTitle">
-            <p>
-              <b>
-                <span style="color:blue;">
-                  Sci
-                </span>
-                <span style="color:green;">
-                  Books
-                </span>
-              </b>
-            </p>
-          </div>
-        </header>
-        <nav class="stick">
-          <div class="menu fa fa-home" onclick="window.location.href='index.html';">
-            Home
-          </div>
-          <div class="menu fa fa-search" onclick="window.location.href='sorter.html';">
-            Lookup
-          </div>
-          <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
-            Cart
-          </div>
-        </nav>
-        <hr>
-        <br>
-            <div class="pictures" onclick="Increase();">
-                <table>
-                    <tr>
-                        <th>
-                            <img src="resources/book9(1).jpg" id="pict1" width="auto" height="700px">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img src="resources/book9(2).jpg" id="pict2" width="100px" height="100px">
-                        </th>
-                        <th>
-                            <img src="resources/book9(3).jpg" id="pict3" width="100px" height="100px">
-                        </th>
-                        <th>
-                            <img src="resources/book9(4).jpg" id="pict4" width="100px" height="100px">
-                        </th>
-                    </tr>
-                </table>
-            </div>
-            <fieldset class="desc">
-              <div>
-                <h2 id="bookTitle">
-                    The C Programming Language
-                    <br>
-                    $20.00
-                </h2>
-                <h3 id="bookAuther">
-                    By: Brian W. Kernighan & Dennis M. Ritchie
-                </h3>
-                <hr>
-                <p id="bookDescription"></p>
-                <div id="payDeliver">
-                    <button class="checkOutBtn" onclick="localStorage.setItem('The C Programming Language', '1');alert('added to your cart');">
-                        <b>
-                          Add To Cart
-                        </b>
-                    </button>
-                    <button class="buy-btn" onclick="checkOutClicked();">
-                      <b>
-                        Buy Now
-                      </b>
-                    </button>
-                </div>
-              </div>
-            </fieldset>
-            <div class="paymentForm" id="checkOutForm">
-              <div class="paymentForm-container">
-                <h2>
-                  Select your payment method
-                </h2>
-                <button class="btn" onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
-                  <i class="fa fa-paypal" style="color:blue;"></i>
-                  Paypal
-                </button>
-                <button class="btn" onclick="window.location.href='PaymentOpts.html';">
-                  <i class="fa fa-credit-card" style="color:black;"></i>
-                  Credit Card
-                </button>
-                <button class="btn cancel" onclick="checkOutCanceled();">
-                  Cancel
-                </button>
-              </div>
-            </div>
-            <script src="cart.js"></script>
-            <script src="script.js"></script>
-        <footer>
 
-        </footer>
-    </body>
+<head>
+  <title>
+    The C Programming Language
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="headTitle">
+      <h2>
+        <b>
+          <span style="color:blue;">
+            Sci
+          </span>
+          <span style="color:green;">
+            Books
+          </span>
+        </b>
+      </h2>
+      <span style="text-align:right;">
+        <i class="icon fa fa-github-square" style="color:black;"
+          onclick="window.location.href='https://github.com/caleb-sudo';"></i>
+        <i class="icon fa fa-youtube-play" style="color:red;"></i>
+        <i class="icon fa fa-twitter" style="color:aqua;"></i>
+        <i class="icon fa fa-facebook-square" style="color:blue;"></i>
+      </span>
+    </div>
+  </header>
+  <nav class="stick">
+    <div class="menu fa fa-home" onclick="window.location.href='index.html';">
+      Home
+    </div>
+    <div class="menu fa fa-search" onclick="window.location.href='sorter.html';">
+      Lookup
+    </div>
+    <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
+      Cart
+    </div>
+  </nav>
+  <hr>
+  <br>
+  <div class="pictures" onclick="Increase();">
+    <table>
+      <tr>
+        <th>
+          <img src="resources/book9(1).jpg" id="pict1" width="auto" height="700px">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <img src="resources/book9(2).jpg" id="pict2" width="100px" height="100px">
+        </th>
+        <th>
+          <img src="resources/book9(3).jpg" id="pict3" width="100px" height="100px">
+        </th>
+        <th>
+          <img src="resources/book9(4).jpg" id="pict4" width="100px" height="100px">
+        </th>
+      </tr>
+    </table>
+  </div>
+  <fieldset class="desc">
+    <div>
+      <h2 id="bookTitle">
+        The C Programming Language
+        <br>
+        $20.00
+      </h2>
+      <h3 id="bookAuther">
+        By: Brian W. Kernighan & Dennis M. Ritchie
+      </h3>
+      <hr>
+      <p id="bookDescription"></p>
+      <div id="payDeliver">
+        <button class="checkOutBtn"
+          onclick="localStorage.setItem('The C Programming Language', '1');alert('added to your cart');">
+          <b>
+            Add To Cart
+          </b>
+        </button>
+        <button class="buy-btn" onclick="checkOutClicked();">
+          <b>
+            Buy Now
+          </b>
+        </button>
+      </div>
+    </div>
+  </fieldset>
+  <div class="paymentForm" id="checkOutForm">
+    <div class="paymentForm-container">
+      <h2>
+        Select your payment method
+      </h2>
+      <button class="btn"
+        onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+        <i class="fa fa-paypal" style="color:blue;"></i>
+        Paypal
+      </button>
+      <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+        <i class="fa fa-credit-card" style="color:black;"></i>
+        Credit Card
+      </button>
+      <button class="btn cancel" onclick="checkOutCanceled();">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+  <footer>
+    <div style="margin-left:49%;">
+      <ul style="text-align:center;">
+        <li style="display:flex;">
+          <a href="questions.html" class="footerLink">
+            <b>
+              Frequently Asked Questions
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="contacts.html" class="footerLink">
+            <b>
+              Contacts
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="security.html" class="footerLink">
+            <b>
+              Security
+            </b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <h2>
+      <span style="color:blue;">
+        Sci
+      </span>
+      <span style="color:green;">
+        Books
+      </span>
+    </h2>
+  </footer>
+</body>
+
 </html>
