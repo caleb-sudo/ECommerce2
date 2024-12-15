@@ -84,7 +84,7 @@ for (var i = 0; i < localStorage.length; i++) {
   li.appendChild(plus);
 
   const del = document.createElement('button');
-  del.textContent = "delete"
+  del.textContent = "delete";
   del.addEventListener("click", deleteItem);
   li.appendChild(del);
 }
