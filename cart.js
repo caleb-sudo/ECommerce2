@@ -90,11 +90,15 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 
 function minusVal() {
-  localStorage.setItem(key, val--);
+  for (var i = 0; i < localStorage.length; i++) {
+    localStorage.setItem(key, val--);
+  }
 }
 
 function plusVal() {
-  localStorage.setItem(key, val++);
+  for (var i = 0; i < localStorage.length; i++) {
+    localStorage.setItem(key, val++);
+  }
 }
 
 function deleteItem() {
