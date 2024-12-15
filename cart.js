@@ -103,7 +103,7 @@ function plusVal() {
 
 function deleteItem() {
   for (var i = 0; i < localStorage.length; i++) {
-    
+
   }
 }
 
@@ -113,3 +113,14 @@ function clearCart() {
 
 numofItems.textContent = localStorage.length + " items";
 total.textContent = "$" + cost;
+
+const checkOut = document.getElementsByClassName("buy-btn");
+checkOut.addEventListener("click", checkOutClicked);
+
+function checkOutClicked() {
+  document.getElementById("checkOutForm").style.display = "block";
+}
+
+function checkOutCanceled() {
+  document.getElementById("checkOutForm").style.display = "none";
+}
