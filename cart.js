@@ -71,7 +71,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const minus = document.createElement('button');
   minus.textContent = "-";
-  minus.onclick = localStorage.setItem(key, val--);
+  minus.addEventListener("click", minusVal);
   li.appendChild(minus);
 
   const quant = document.createElement('p');
@@ -80,8 +80,16 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const plus = document.createElement('button');
   plus.textContent = "+";
-  plus.onclick = localStorage.setItem(key, val++);
+  plus.addEventListener("click", plusVal);
   li.appendChild(plus);
+}
+
+function minusVal() {
+  localStorage.setItem(key, val--);
+}
+
+function plusVal() {
+  localStorage.setItem(key, val++);
 }
 
 numofItems.textContent = localStorage.length + " items";
