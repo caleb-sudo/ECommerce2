@@ -58,10 +58,6 @@ h1 {
     text-align: center;
 }
 
-.container{
-    padding: 0 1rem 0 2rem;
-}
-
 .heading{
     text-align: center;
     font-size: 1.3rem;
@@ -210,11 +206,6 @@ hr {
         justify-content: center;
     }
 
-    .container {
-        width: 100%;
-        padding: 2rem;
-    }
-
     .cart {
         padding: 2rem;
         width: 100%;
@@ -295,11 +286,6 @@ hr {
 
 .column img:hover {
   opacity: 1;
-}
-
-.container {
-  position: relative;
-  display: none;
 }
 
 #imgtext {
