@@ -11,16 +11,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   li.classList.add("cart-item");
 
-  const title = li.createElement('h3');
-  title.textContent = key;
-  li.appendChild(title);
-
-  const quantity = li.createElement('p');
-  li.appendChild(quantity);
-
-  const del = li.createElement('span');
-  li.appendChild(del);
-
+  li.textContent = key;
   ul.appendChild(li);
 
   switch (key) {
