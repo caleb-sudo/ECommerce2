@@ -8,21 +8,19 @@ var cost = 0;
 for (var i = 0; i < localStorage.length; i++) {
   var key = localStorage.key(i);
   const li = document.createElement('li');
-  const div = document.createElement('div');
 
-  div.classList.add("cart-item");
+  li.classList.add("cart-item");
 
   const title = document.createElement('h3');
   title.textContent = key;
-  div.appendChild(title);
+  li.appendChild(title);
 
   const quantity = document.createElement('p');
-  div.appendChild(quantity);
+  li.appendChild(quantity);
 
   const del = document.createElement('span');
-  div.appendChild(del);
+  li.appendChild(del);
 
-  li.appendChild(div);
   li.textContent = key;
   li.style.display = 'flex';
   ul.appendChild(li);
