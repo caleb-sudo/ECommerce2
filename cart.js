@@ -71,6 +71,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const minus = document.createElement('button');
   minus.textContent = "-";
+  minus.onclick = localStorage.setItem(key, val--);
   li.appendChild(minus);
 
   const quant = document.createElement('p');
@@ -79,6 +80,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const plus = document.createElement('button');
   plus.textContent = "+";
+  plus.onclick = localStorage.setItem(key, val++);
   li.appendChild(plus);
 }
 
