@@ -1,11 +1,10 @@
-const arr = localStorage.valueOf();
-
 const ul = document.querySelector('ul');
 var numofItems = document.getElementById("numOfItems");
 var total = document.getElementById("totalCost");
 var cost = 0;
 
 for (var i = 0; i < localStorage.length; i++) {
+  var price;
   var key = localStorage.key(i);
   var val = localStorage.getItem(key);
   const li = document.createElement('li');
@@ -14,6 +13,10 @@ for (var i = 0; i < localStorage.length; i++) {
 
   li.textContent = key;
   ul.appendChild(li);
+
+  const itemCost = document.createElement('p');
+  itemCost.textContent = "$" + price + ".00";
+  li.appendChild(itemCost);
 
   const quant = document.createElement('p');
   quant.textContent = val;
@@ -26,30 +29,36 @@ for (var i = 0; i < localStorage.length; i++) {
           case "Bowl of Heaven & Shipstar":
             case "Glorious":
               case "To Sleep in a Sea Of Stars":
-                cost += 15;
+                price = 15;
+                cost += price;
                 break;
 
     case "Origins":
       case "An Astronaut's Guide to Life":
-        cost += 10;
+        price = 10;
+        cost += price;
         break;
 
     case "The Grand Design":
-      cost += 9;
+      price = 9;
+      cost += price;
       break;
     
     case "Letters From an Astrophysicsist":
       case "You Are Here: Around the World in 92 Minutes":
         case "The Apollo Murders":
-          cost += 25;
+          price = 25;
+          cost += price;
           break;
     
     case "The Three Body Problem Trilogy":
-      cost += 60;
+      price = 60;
+      cost += price;
       break;
 
     case "Breif Answers, Big Questions":
-      cost += 40;
+      price = 40;
+      cost += price;
       break;
     
     case "The C Programming Language":
@@ -59,7 +68,8 @@ for (var i = 0; i < localStorage.length; i++) {
             case "To Hold Up The Sky":
               case "The Wandering Earth":
                 case "The Redemtion of Time":
-                  cost += 20;
+                  price = 20;
+                  cost += price;
                   break;
   }
 }
