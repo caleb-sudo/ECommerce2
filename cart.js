@@ -74,7 +74,6 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const minus = document.createElement('button');
   minus.textContent = "-";
-  minus.addEventListener("click", minusVal);
   quantChanger.appendChild(minus);
 
   const quant = document.createElement('p');
@@ -87,7 +86,6 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const del = document.createElement('button');
   del.textContent = "delete";
-  del.addEventListener("click", deleteItem);
   li.appendChild(del);
 }
 
