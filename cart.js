@@ -82,6 +82,11 @@ for (var i = 0; i < localStorage.length; i++) {
   plus.textContent = "+";
   plus.addEventListener("click", plusVal);
   li.appendChild(plus);
+
+  const del = document.createElement('button');
+  del.textContent = "delete"
+  del.addEventListener("click", deleteItem);
+  li.appendChild(del);
 }
 
 function minusVal() {
@@ -90,6 +95,14 @@ function minusVal() {
 
 function plusVal() {
   localStorage.setItem(key, val++);
+}
+
+function deleteItem() {
+
+}
+
+function clearCart() {
+  localStorage.clear();
 }
 
 numofItems.textContent = localStorage.length + " items";
