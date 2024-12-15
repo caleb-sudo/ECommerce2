@@ -69,9 +69,17 @@ for (var i = 0; i < localStorage.length; i++) {
   itemCost.textContent = "$" + price + ".00";
   li.appendChild(itemCost);
 
+  const minus = document.createElement('button');
+  minus.textContent = "-";
+  li.appendChild(minus);
+
   const quant = document.createElement('p');
   quant.textContent = val;
   li.appendChild(quant);
+
+  const plus = document.createElement('button');
+  plus.textContent = "+";
+  li.appendChild(plus);
 }
 
 numofItems.textContent = localStorage.length + " items";
