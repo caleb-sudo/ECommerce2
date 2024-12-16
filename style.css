@@ -469,7 +469,7 @@ header {
 
 .paymentForm,
 .form-popup {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 0;
   right: 15px;
