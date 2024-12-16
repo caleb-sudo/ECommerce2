@@ -471,6 +471,14 @@ header {
   z-index: 9;
 }
 
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  background-color: lightgray;
+}
+
 .paymentForm-container,
 .form-container {
   max-width: 300px;
