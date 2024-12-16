@@ -181,6 +181,10 @@ hr {
     padding: 3rem 0 1rem 0;
 }
 
+.prevImg {
+  width: auto;
+  height: 400px;
+}
 
 @media screen and (max-width: 1150px) {
     .product-card {
@@ -194,10 +198,6 @@ hr {
 
     .cart {
         min-width: 50%;
-    }
-    .prevImg {
-      width: auto;
-      height: 400px;
     }
 }
 
