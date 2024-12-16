@@ -31,6 +31,7 @@ var coll = document.getElementsByClassName("collapsible");
 function change(pict1, pict2) {
   temp = pict1.src;
   pict1.src = pict2.src;
+  alert(temp);
   pict2.src = temp;
 }
 
