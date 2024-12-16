@@ -24,13 +24,14 @@ const books = [
 ]
 
 var page = -1;
+var temp = "";
 
 var coll = document.getElementsByClassName("collapsible");
 
-function change() {
-  var pict1 = document.getElementById("pict1");
-  var pict2 = document.getElementById("pict2");
+function change(pict1, pict2) {
+  temp = pict1.src;
   pict1.src = pict2.src;
+  pict2.src = temp;
 }
 
 for (var i = 0; i < coll.length; i++) {
