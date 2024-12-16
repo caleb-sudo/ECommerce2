@@ -195,6 +195,10 @@ hr {
     .cart {
         min-width: 50%;
     }
+    .prevImg {
+      width: auto;
+      height: 400px;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -217,6 +221,10 @@ hr {
     .form-inline {
       flex-direction: column;
       align-items: stretch;
+    }
+    .prevImg {
+      width: auto;
+      height: 100px;
     }
 }
 
