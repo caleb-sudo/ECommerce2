@@ -47,83 +47,91 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book6(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book6(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book6(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book6(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <span
-          style="background-color:red;color:white;font-size:15px;border-radius:10px;padding-right:10px;padding-left:10px;">
-          <b>
-            50% off
-          </b>
-        </span>
-        <br>
-        <h2 id="bookTitle">
-          The Grand Design
-          <br>
-          <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
-            $18.00
-          </span>
-          $9.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Stephen Hawking & Leonard Mlodinow
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          When and how did the universe begin? Why are we here? What is the nature of reality? Is the apparent “grand
-          design” of our universe evidence
-          of a benevolent creator who set things in motion—or does science offer another explanation? In this startling
-          and lavishly illustrated book,
-          Stephen Hawking and Leonard Mlodinow present the most recent scientific thinking about these and other abiding
-          mysteries of the universe,
-          in nontechnical language marked by brilliance and simplicity.
-          <br>
-          <br>
-          According to quantum theory, the cosmos does not have just a single existence or history. The authors explain
-          that we ourselves
-          are the product of quantum fluctuations in the early universe, and show how quantum theory predicts the
-          “multiverse”—the idea that
-          ours is just one of many universes that appeared spontaneously out of nothing, each with different laws of
-          nature. They conclude with a riveting
-          assessment of M-theory, an explanation of the laws governing our universe that is currently the only viable
-          candidate for a
-          “theory of everything”: the unified theory that Einstein was looking for, which, if confirmed, would represent
-          the ultimate triumph of human reason.
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('The Grand Design', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book6(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book6(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book6(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book6(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <span
+                style="background-color:red;color:white;font-size:15px;border-radius:10px;padding-right:10px;padding-left:10px;">
+                <b>
+                  50% off
+                </b>
+              </span>
+              <br>
+              <h2 id="bookTitle">
+                The Grand Design
+                <br>
+                <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                  $18.00
+                </span>
+                $9.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Stephen Hawking & Leonard Mlodinow
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                When and how did the universe begin? Why are we here? What is the nature of reality? Is the apparent “grand
+                design” of our universe evidence
+                of a benevolent creator who set things in motion—or does science offer another explanation? In this startling
+                and lavishly illustrated book,
+                Stephen Hawking and Leonard Mlodinow present the most recent scientific thinking about these and other abiding
+                mysteries of the universe,
+                in nontechnical language marked by brilliance and simplicity.
+                <br>
+                <br>
+                According to quantum theory, the cosmos does not have just a single existence or history. The authors explain
+                that we ourselves
+                are the product of quantum fluctuations in the early universe, and show how quantum theory predicts the
+                “multiverse”—the idea that
+                ours is just one of many universes that appeared spontaneously out of nothing, each with different laws of
+                nature. They conclude with a riveting
+                assessment of M-theory, an explanation of the laws governing our universe that is currently the only viable
+                candidate for a
+                “theory of everything”: the unified theory that Einstein was looking for, which, if confirmed, would represent
+                the ultimate triumph of human reason.
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('The Grand Design', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>

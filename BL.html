@@ -47,66 +47,74 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book12(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book12(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book12(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book12(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          Ball Lightning
-          <br>
-          $20.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Cixin Liu
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          When Chen's parents are incinerated before his eyes by a blast of ball lightning, he devotes his
-          life to cracking the secret of this mysterious natural phenomenon. His search takes him to stormy
-          mountaintops, an experimental military weapons lab, and an old Soviet science station.
-          <br>
-          <br>
-          The more he learns, the more he comes to realize that ball lightning is just the tip of an entirely new
-          frontier.
-          While Chen's quest for answers gives purpose to his lonely life, it also pits him against soldiers and
-          scientists with motives of
-          their own: a beautiful army major with an obsession with dangerous weaponry, and a physicist who has no place
-          for ethical considerations in his
-          single-minded pursuit of knowledge.
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('Ball Lightning', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book12(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book12(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book12(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book12(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                Ball Lightning
+                <br>
+                $20.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Cixin Liu
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                When Chen's parents are incinerated before his eyes by a blast of ball lightning, he devotes his
+                life to cracking the secret of this mysterious natural phenomenon. His search takes him to stormy
+                mountaintops, an experimental military weapons lab, and an old Soviet science station.
+                <br>
+                <br>
+                The more he learns, the more he comes to realize that ball lightning is just the tip of an entirely new
+                frontier.
+                While Chen's quest for answers gives purpose to his lonely life, it also pits him against soldiers and
+                scientists with motives of
+                their own: a beautiful army major with an obsession with dangerous weaponry, and a physicist who has no place
+                for ethical considerations in his
+                single-minded pursuit of knowledge.
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('Ball Lightning', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>

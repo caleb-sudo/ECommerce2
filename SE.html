@@ -47,74 +47,82 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book11(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book11(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book11(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book11(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          Supernova Era
-          <br>
-          $20.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Cixin Liu
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          In those days, Earth was a planet in space.
-          <br>
-          <br>
-          In those days, Beijing was a city on Earth.
-          <br>
-          <br>
-          On this night, history as known to humanity came to an end.
-          <br>
-          <br>
-          Eight light years away, a star has died, creating a supernova event that showers Earth in deadly levels of
-          radiation.
-          Within a year, everyone over the age of 13 will die.
-          <br>
-          <br>
-          And so the countdown begins. Parents apprentice their children and try to pass on the knowledge needed to keep
-          the world running.
-          <br>
-          <br>
-          But when the world is theirs, the last generation may not want to continue the legacy left to them. And in
-          shaping the future
-          however they want, will the children usher in an era of bright beginnings or final mistakes?
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn" onclick="localStorage.setItem('Supernova Era', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book11(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book11(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book11(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book11(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                Supernova Era
+                <br>
+                $20.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Cixin Liu
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                In those days, Earth was a planet in space.
+                <br>
+                <br>
+                In those days, Beijing was a city on Earth.
+                <br>
+                <br>
+                On this night, history as known to humanity came to an end.
+                <br>
+                <br>
+                Eight light years away, a star has died, creating a supernova event that showers Earth in deadly levels of
+                radiation.
+                Within a year, everyone over the age of 13 will die.
+                <br>
+                <br>
+                And so the countdown begins. Parents apprentice their children and try to pass on the knowledge needed to keep
+                the world running.
+                <br>
+                <br>
+                But when the world is theirs, the last generation may not want to continue the legacy left to them. And in
+                shaping the future
+                however they want, will the children usher in an era of bright beginnings or final mistakes?
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn" onclick="localStorage.setItem('Supernova Era', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>

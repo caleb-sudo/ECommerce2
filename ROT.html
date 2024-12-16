@@ -47,69 +47,77 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book15(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book15(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book15(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book15(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          The Redemtion of Time
-          <br>
-          $20.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Baoshu
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          In the midst of an interstellar war, Yun Tianming found himself on the front lines. Riddled with cancer, he
-          chose to end his life, only to find himself
-          flash frozen and launched into space where the Trisolaran First Fleet awaited. Captured and tortured beyond
-          endurance for decades, Yun eventually
-          succumbed to helping the aliens subjugate humanity in order to save Earth from complete destruction.
-          <br>
-          <br>
-          Granted a healthy clone body by the Trisolarans, Yun has spent his very long life in exile as a traitor to the
-          human race. Nearing the end of his
-          existence at last, he suddenly receives another reprieve―and another regeneration. A consciousness calling
-          itself The Spirit has recruited him to
-          wage battle against an entity that threatens the existence of the entire universe. But Yun refuses to be a
-          pawn
-          again and makes his own plans to
-          save humanity`s future…
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('The Redemtion of Time', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book15(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book15(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book15(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book15(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                The Redemtion of Time
+                <br>
+                $20.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Baoshu
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                In the midst of an interstellar war, Yun Tianming found himself on the front lines. Riddled with cancer, he
+                chose to end his life, only to find himself
+                flash frozen and launched into space where the Trisolaran First Fleet awaited. Captured and tortured beyond
+                endurance for decades, Yun eventually
+                succumbed to helping the aliens subjugate humanity in order to save Earth from complete destruction.
+                <br>
+                <br>
+                Granted a healthy clone body by the Trisolarans, Yun has spent his very long life in exile as a traitor to the
+                human race. Nearing the end of his
+                existence at last, he suddenly receives another reprieve―and another regeneration. A consciousness calling
+                itself The Spirit has recruited him to
+                wage battle against an entity that threatens the existence of the entire universe. But Yun refuses to be a
+                pawn
+                again and makes his own plans to
+                save humanity`s future…
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('The Redemtion of Time', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>

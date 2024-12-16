@@ -47,75 +47,83 @@
   <section>
   <hr>
   <br>
-  <div class="pictures" onclick="Increase();">
-    <table>
-      <tr>
-        <th>
-          <img src="resources/book16(1).jpg" id="pict1" width="auto" height="700px">
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <img src="resources/book16(2).jpg" id="pict2" width="100px" height="100px">
-        </th>
-        <th>
-          <img src="resources/book16(3).jpg" id="pict3" width="100px" height="100px">
-        </th>
-        <th>
-          <img src="resources/book16(4).jpg" id="pict4" width="100px" height="100px">
-        </th>
-      </tr>
-    </table>
-  </div>
-  <fieldset class="desc">
-    <div>
-      <span
-        style="background-color:red;color:white;font-size:15px;border-radius:10px;padding-right:10px;padding-left:10px;">
-        <b>
-          50% off
-        </b>
-      </span>
-      <h2 id="bookTitle">
-        Bowl of Heaven & Shipstar
-        <br>
-        <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
-          $30.00
-        </span>
-        $15.00
-      </h2>
-      <h3 id="bookAuther">
-        By: Gregory Benford & Larry Niven
-      </h3>
-      <hr>
-      <p id="bookDescription">
-        A human expedition to colonize another star system is jeopardized by an encounter with an astonishingly immense
-        artifact in
-        interstellar space: a bowl-shaped structure cupping a star, with a habitable area equivalent to many millions of
-        Earths. And which, tantalizingly,
-        is on a direct path heading toward the same system.
-        <br>
-        <br>
-        Investigating the Bowl, or Shipstar, the human explorers are separated―one group captured by the gigantic
-        structure`s alien inhabitants, the other
-        pursued across its strange and dangerous landscape―while the mystery of the Shipstar`s origins and purpose
-        propel the human voyagers toward discoveries
-        that transform their understanding of their place in the universe.
-      </p>
-      <div id="payDeliver">
-        <button class="checkOutBtn"
-          onclick="localStorage.setItem('Bowl of Heaven & Shipstar', '1');alert('added to your cart');">
-          <b>
-            Add To Cart
-          </b>
-        </button>
-        <button class="buy-btn" onclick="checkOutClicked();">
-          <b>
-            Buy Now
-          </b>
-        </button>
-      </div>
-    </div>
-  </fieldset>
+  <table>
+    <tr>
+      <td>
+        <div class="pictures" onclick="Increase();">
+          <table>
+            <tr>
+              <th>
+                <img src="resources/book16(1).jpg" id="pict1" width="auto" height="700px">
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img src="resources/book16(2).jpg" id="pict2" width="100px" height="100px">
+              </th>
+              <th>
+                <img src="resources/book16(3).jpg" id="pict3" width="100px" height="100px">
+              </th>
+              <th>
+                <img src="resources/book16(4).jpg" id="pict4" width="100px" height="100px">
+              </th>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td>
+        <fieldset class="desc">
+          <div>
+            <span
+              style="background-color:red;color:white;font-size:15px;border-radius:10px;padding-right:10px;padding-left:10px;">
+              <b>
+                50% off
+              </b>
+            </span>
+            <h2 id="bookTitle">
+              Bowl of Heaven & Shipstar
+              <br>
+              <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                $30.00
+              </span>
+              $15.00
+            </h2>
+            <h3 id="bookAuther">
+              By: Gregory Benford & Larry Niven
+            </h3>
+            <hr>
+            <p id="bookDescription">
+              A human expedition to colonize another star system is jeopardized by an encounter with an astonishingly immense
+              artifact in
+              interstellar space: a bowl-shaped structure cupping a star, with a habitable area equivalent to many millions of
+              Earths. And which, tantalizingly,
+              is on a direct path heading toward the same system.
+              <br>
+              <br>
+              Investigating the Bowl, or Shipstar, the human explorers are separated―one group captured by the gigantic
+              structure`s alien inhabitants, the other
+              pursued across its strange and dangerous landscape―while the mystery of the Shipstar`s origins and purpose
+              propel the human voyagers toward discoveries
+              that transform their understanding of their place in the universe.
+            </p>
+            <div id="payDeliver">
+              <button class="checkOutBtn"
+                onclick="localStorage.setItem('Bowl of Heaven & Shipstar', '1');alert('added to your cart');">
+                <b>
+                  Add To Cart
+                </b>
+              </button>
+              <button class="buy-btn" onclick="checkOutClicked();">
+                <b>
+                  Buy Now
+                </b>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
   <div class="paymentForm" id="checkOutForm">
     <div class="paymentForm-container">
       <h2>

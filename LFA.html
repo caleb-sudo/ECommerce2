@@ -47,64 +47,72 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book7(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book7(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book7(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book7(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          Letters from an Astrophysicist
-          <br>
-          $25.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Neil DeGrasse Tyson
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          Astrophysicist Neil deGrasse Tyson has attracted one of the world`s largest online followings with his
-          fascinating, widely accessible insights
-          into science and our universe. Now, Tyson invites us to go behind the scenes of his public fame by revealing
-          his
-          correspondence with people across
-          the globe who have sought him out in search of answers. In this hand-picked collection of 101 letters, Tyson
-          draws upon cosmic perspectives to address
-          a vast array of questions about science, faith, philosophy, life, and of course, Pluto. His succinct,
-          opinionated, passionate, and often funny
-          responses reflect his popularity and standing as a leading educator.
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('Letters from an Astrophysicist', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book7(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book7(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book7(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book7(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                Letters from an Astrophysicist
+                <br>
+                $25.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Neil DeGrasse Tyson
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                Astrophysicist Neil deGrasse Tyson has attracted one of the world`s largest online followings with his
+                fascinating, widely accessible insights
+                into science and our universe. Now, Tyson invites us to go behind the scenes of his public fame by revealing
+                his
+                correspondence with people across
+                the globe who have sought him out in search of answers. In this hand-picked collection of 101 letters, Tyson
+                draws upon cosmic perspectives to address
+                a vast array of questions about science, faith, philosophy, life, and of course, Pluto. His succinct,
+                opinionated, passionate, and often funny
+                responses reflect his popularity and standing as a leading educator.
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('Letters from an Astrophysicist', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>

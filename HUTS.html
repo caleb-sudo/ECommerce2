@@ -63,7 +63,6 @@
             <img src="resources/book13(4).jpg" width="auto" height="400px" onclick="inlarge(this);">
           </div>
         </div>
-  
         <div class="container">
           <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
           <img id="expandedImg" style="width:auto;height:10%;">
@@ -71,57 +70,55 @@
         </div>
       </td>
       <td>
-
+        <fieldset class="desc">
+          <div>
+            <h2 id="bookTitle">
+              To Hold Up The Sky
+              <br>
+              $20.00
+            </h2>
+            <h3 id="bookAuther">
+              By: Cixin Liu
+            </h3>
+            <hr>
+            <p id="bookDescription"></p>
+            <div id="payDeliver">
+              <button class="checkOutBtn"
+                onclick="localStorage.setItem('To Hold Up The Sky', '1');alert('added to your cart');">
+                <b>
+                  Add To Cart
+                </b>
+              </button>
+              <button class="checkOutBtn" onclick="checkOutClicked();">
+                <b>
+                  Buy Now
+                </b>
+              </button>
+            </div>
+          </div>
+        </fieldset>
       </td>
     </tr>
   </table>
-      
-      <fieldset class="desc">
-        <div>
-          <h2 id="bookTitle">
-            To Hold Up The Sky
-            <br>
-            $20.00
-          </h2>
-          <h3 id="bookAuther">
-            By: Cixin Liu
-          </h3>
-          <hr>
-          <p id="bookDescription"></p>
-          <div id="payDeliver">
-            <button class="checkOutBtn"
-              onclick="localStorage.setItem('To Hold Up The Sky', '1');alert('added to your cart');">
-              <b>
-                Add To Cart
-              </b>
-            </button>
-            <button class="checkOutBtn" onclick="checkOutClicked();">
-              <b>
-                Buy Now
-              </b>
-            </button>
-          </div>
-        </div>
-      </fieldset>
-      <div class="paymentForm" id="checkOutForm">
-        <div class="paymentForm-container">
-          <h2>
-            Select your payment method
-          </h2>
-          <button class="btn"
-            onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
-            <i class="fa fa-paypal" style="color:blue;"></i>
-            Paypal
-          </button>
-          <button class="btn" onclick="window.location.href='PaymentOpts.html';">
-            <i class="fa fa-credit-card" style="color:black;"></i>
-            Credit Card
-          </button>
-          <button class="btn cancel" onclick="checkOutCanceled();">
-            Cancel
-          </button>
-        </div>
-      </div>
+  <div class="paymentForm" id="checkOutForm">
+    <div class="paymentForm-container">
+      <h2>
+        Select your payment method
+      </h2>
+      <button class="btn"
+        onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+        <i class="fa fa-paypal" style="color:blue;"></i>
+        Paypal
+      </button>
+      <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+        <i class="fa fa-credit-card" style="color:black;"></i>
+        Credit Card
+      </button>
+      <button class="btn cancel" onclick="checkOutCanceled();">
+        Cancel
+      </button>
+    </div>
+  </div>
   <hr>
   <table style="width:100%;">
     <tr>

@@ -47,67 +47,75 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book10(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book10(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book10(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book10(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book10(5).jpg" id="pict5" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          The Three Body Problem Trilogy
-          <br>
-          $50.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Cixin Liu
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          A secret military group sends signals into space in hopes of establishing contact with aliens—and succeeds.
-          <br>
-          <br>
-          Picking up their signal is an alien civilization on the brink of destruction who now readies to invade Earth.
-          <br>
-          <br>
-          News of the coming invasion divides humanity like never before. Some want to help the superior beings take
-          over
-          a world they
-          see as corrupt. Others prepare to fight the invasion at all cost.
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('The Three Body Problem Trilogy', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="checkOutBtn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book10(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book10(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book10(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book10(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book10(5).jpg" id="pict5" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                The Three Body Problem Trilogy
+                <br>
+                $50.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Cixin Liu
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                A secret military group sends signals into space in hopes of establishing contact with aliens—and succeeds.
+                <br>
+                <br>
+                Picking up their signal is an alien civilization on the brink of destruction who now readies to invade Earth.
+                <br>
+                <br>
+                News of the coming invasion divides humanity like never before. Some want to help the superior beings take
+                over
+                a world they
+                see as corrupt. Others prepare to fight the invasion at all cost.
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('The Three Body Problem Trilogy', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="checkOutBtn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>

@@ -47,75 +47,83 @@
   <section>
     <hr>
     <br>
-    <div class="pictures" onclick="Increase();">
-      <table>
-        <tr>
-          <th>
-            <img src="resources/book2(1).jpg" id="pict1" width="auto" height="700px">
-          </th>
-        </tr>
-        <tr>
-          <th>
-            <img src="resources/book2(2).jpg" id="pict2" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book2(3).jpg" id="pict3" width="100px" height="100px">
-          </th>
-          <th>
-            <img src="resources/book2(4).jpg" id="pict4" width="100px" height="100px">
-          </th>
-        </tr>
-      </table>
-    </div>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          On The Origin Of Time
-          <br>
-          $15.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Thomas Hertog
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          Perhaps the biggest question Stephen Hawking tried to answer in his extraordinary life was how the universe
-          could have created conditions so
-          perfectly hospitable to life. In order to solve this mystery, Hawking studied the big bang origin of the
-          universe, but his early work ran into a
-          crisis when the math predicted many big bangs producing a multiverse—countless different universes, most of
-          which would be far too bizarre to
-          harbor life.
-          <br>
-          <br>
-          Holed up in the theoretical physics department at Cambridge, Stephen Hawking and his friend and collaborator
-          Thomas Hertog worked on this problem
-          for twenty years, developing a new theory of the cosmos that could account for the emergence of life. Peering
-          into the extreme quantum physics of
-          cosmic holograms and venturing far back in time to our deepest roots, they were startled to find a deeper
-          level of evolution in which the physical
-          laws themselves transform and simplify until particles, forces, and even time itself fades away. This
-          discovery led them to a revolutionary
-          idea: The laws of physics are not set in stone but are born and co-evolve as the universe they govern takes
-          shape. As Hawking`s final days drew near,
-          the two collaborators published their theory, which proposed a radical new Darwinian perspective on the
-          origins of our universe.
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('On The Origin Of Time', '1');alert('added to your cart')">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
-        </div>
-      </div>
-    </fieldset>
+    <table>
+      <tr>
+        <td>
+          <div class="pictures" onclick="Increase();">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book2(1).jpg" id="pict1" width="auto" height="700px">
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <img src="resources/book2(2).jpg" id="pict2" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book2(3).jpg" id="pict3" width="100px" height="100px">
+                </th>
+                <th>
+                  <img src="resources/book2(4).jpg" id="pict4" width="100px" height="100px">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                On The Origin Of Time
+                <br>
+                $15.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Thomas Hertog
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                Perhaps the biggest question Stephen Hawking tried to answer in his extraordinary life was how the universe
+                could have created conditions so
+                perfectly hospitable to life. In order to solve this mystery, Hawking studied the big bang origin of the
+                universe, but his early work ran into a
+                crisis when the math predicted many big bangs producing a multiverse—countless different universes, most of
+                which would be far too bizarre to
+                harbor life.
+                <br>
+                <br>
+                Holed up in the theoretical physics department at Cambridge, Stephen Hawking and his friend and collaborator
+                Thomas Hertog worked on this problem
+                for twenty years, developing a new theory of the cosmos that could account for the emergence of life. Peering
+                into the extreme quantum physics of
+                cosmic holograms and venturing far back in time to our deepest roots, they were startled to find a deeper
+                level of evolution in which the physical
+                laws themselves transform and simplify until particles, forces, and even time itself fades away. This
+                discovery led them to a revolutionary
+                idea: The laws of physics are not set in stone but are born and co-evolve as the universe they govern takes
+                shape. As Hawking`s final days drew near,
+                the two collaborators published their theory, which proposed a radical new Darwinian perspective on the
+                origins of our universe.
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('On The Origin Of Time', '1');alert('added to your cart')">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
     <div class="paymentForm" id="checkOutForm">
       <div class="paymentForm-container">
         <h2>
