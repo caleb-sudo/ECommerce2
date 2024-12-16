@@ -112,7 +112,7 @@ function plusVal() {
 
 function deleteItem() {
   for (var i = 0; i < localStorage.length; i++) {
-    
+    localStorage.removeItem(key);
   }
   reload();
 }
