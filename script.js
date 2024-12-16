@@ -27,6 +27,12 @@ var page = -1;
 
 var coll = document.getElementsByClassName("collapsible");
 
+function change() {
+  var pict1 = document.getElementById("pict1");
+  var pict2 = document.getElementById("pict2");
+  pict1.src = pict2.src;
+}
+
 for (var i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
