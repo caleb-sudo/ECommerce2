@@ -21,17 +21,20 @@ for (var i = 0; i < localStorage.length; i++) {
             case "Glorious":
               case "To Sleep in a Sea Of Stars":
                 price = 15;
+                price *= val;
                 cost += price;
                 break;
 
     case "Origins":
       case "An Astronaut's Guide to Life":
         price = 10;
+        price *= val;
         cost += price;
         break;
 
     case "The Grand Design":
       price = 9;
+      price *= val;
       cost += price;
       break;
     
@@ -39,16 +42,19 @@ for (var i = 0; i < localStorage.length; i++) {
       case "You Are Here: Around the World in 92 Minutes":
         case "The Apollo Murders":
           price = 25;
+          price *= val;
           cost += price;
           break;
     
     case "The Three Body Problem Trilogy":
       price = 60;
+      price *= val;
       cost += price;
       break;
 
     case "Breif Answers, Big Questions":
       price = 40;
+      price *= val;
       cost += price;
       break;
     
@@ -60,6 +66,7 @@ for (var i = 0; i < localStorage.length; i++) {
               case "The Wandering Earth":
                 case "The Redemtion of Time":
                   price = 20;
+                  price *= val;
                   cost += price;
                   break;
   }
