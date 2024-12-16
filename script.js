@@ -24,28 +24,6 @@ const books = [
 ]
 
 var page = -1;
-var temp;
-
-var pict1 = document.getElementById("pict1");
-var pict2 = document.getElementById("pict2");
-var pict3 = document.getElementById("pict3");
-var pict4 = document.getElementById("pict4");
-
-pict1.addEventListener("clicked", (e) => {
-  
-});
-
-pict2.addEventListener("clicked", (e) => {
-  pict2.src = temp;
-  pict2.src = pict1.src;
-  pict1.src = temp;
-});
-
-pict3.addEventListener("clicked", (e) => {
-});
-
-pict4.addEventListener("clicked", (e) => {
-});
 
 var coll = document.getElementsByClassName("collapsible");
 
