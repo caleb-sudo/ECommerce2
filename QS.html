@@ -46,81 +46,93 @@
   </nav>
   <hr>
   <br>
-  <div class="pictures" onclick="Increase();">
-    <table>
-      <tr>
-        <th>
-          <img src="resources/book1(1).jpg" id="pict1" width="auto" height="700px">
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <img src="resources/book1(2).jpg" id="pict2" width="100px" height="100px">
-        </th>
-        <th>
-          <img src="resources/book1(3).jpg" id="pict3" width="100px" height="100px">
-        </th>
-        <th>
-          <img src="resources/book1(4).jpg" id="pict4" width="100px" height="100px">
-        </th>
-      </tr>
-    </table>
-  </div>
-  <aside>
-    <fieldset class="desc">
-      <div>
-        <h2 id="bookTitle">
-          Quantum Supremacy
-          <br>
-          $15.00
-        </h2>
-        <h3 id="bookAuther">
-          By: Michio Kaku
-        </h3>
-        <hr>
-        <p id="bookDescription">
-          The runaway success of the microchip may finally be reaching its end. As shrinking transistors approach the
-          size
-          of atoms,
-          the phenomenal growth of computational power inevitably collapses. But this change heralds the birth of a
-          revolutionary new type of computer, one
-          that calculates on atoms themselves.
-          <br>
-          <br>
-          Quantum computers promise unprecedented gains in computing power, enabling advancements that could overturn
-          every aspect of our daily lives.
-          While the media has mainly focused on their startling potential to crack any known encryption method, the race
-          is already on to exploit their
-          incredible power to revolutionize industry. Automotive makers, medical researchers, and consulting firms are
-          all
-          betting on quantum computing to
-          design more efficient vehicles, create life-saving new drugs, and streamline businesses. But this is only the
-          beginning. Quantum computing could be
-          used to decode the complex chemical processes needed to produce cheap fertilizers and unleash a second Green
-          Revolution; create a super battery that
-          will enable the Solar Age; or design nuclear fusion reactors to generate clean, safe, renewable energy. It may
-          even unravel the fiendishly
-          difficult protein folding that lies at the heart of as-yet-incurable diseases like Alzheimer`s, ALS, and
-          Parkinson`s. Already, quantum computers
-          are being put to work to help solve the greatest mystery in science—the origin of the universe.
-        </p>
-        <div id="payDeliver">
-          <button class="checkOutBtn"
-            onclick="localStorage.setItem('Quantum Supremacy', '1');alert('added to your cart');">
-            <b>
-              Add To Cart
-            </b>
-          </button>
-          <button class="buy-btn" onclick="checkOutClicked();">
-            <b>
-              Buy Now
-            </b>
-          </button>
+  <table>
+    <tr>
+      <td>
+        <div class="pictures" onclick="Increase();">
+          <table>
+            <tr>
+              <th>
+                <img src="resources/book1(1).jpg" id="pict1" width="auto" height="700px">
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <img src="resources/book1(2).jpg" id="pict2" width="100px" height="100px">
+              </th>
+              <th>
+                <img src="resources/book1(3).jpg" id="pict3" width="100px" height="100px">
+              </th>
+              <th>
+                <img src="resources/book1(4).jpg" id="pict4" width="100px" height="100px">
+              </th>
+            </tr>
+          </table>
         </div>
-      </div>
-    </fieldset>
-  </aside>
-
+      </td>
+      <td>
+        <fieldset class="desc">
+          <div>
+            <h2 id="bookTitle">
+              Quantum Supremacy
+              <br>
+              $15.00
+            </h2>
+            <h3 id="bookAuther">
+              By: Michio Kaku
+            </h3>
+            <hr>
+            <p id="bookDescription">
+              The runaway success of the microchip may finally be reaching its end. As shrinking transistors approach
+              the
+              size
+              of atoms,
+              the phenomenal growth of computational power inevitably collapses. But this change heralds the birth of a
+              revolutionary new type of computer, one
+              that calculates on atoms themselves.
+              <br>
+              <br>
+              Quantum computers promise unprecedented gains in computing power, enabling advancements that could
+              overturn
+              every aspect of our daily lives.
+              While the media has mainly focused on their startling potential to crack any known encryption method, the
+              race
+              is already on to exploit their
+              incredible power to revolutionize industry. Automotive makers, medical researchers, and consulting firms
+              are
+              all
+              betting on quantum computing to
+              design more efficient vehicles, create life-saving new drugs, and streamline businesses. But this is only
+              the
+              beginning. Quantum computing could be
+              used to decode the complex chemical processes needed to produce cheap fertilizers and unleash a second
+              Green
+              Revolution; create a super battery that
+              will enable the Solar Age; or design nuclear fusion reactors to generate clean, safe, renewable energy. It
+              may
+              even unravel the fiendishly
+              difficult protein folding that lies at the heart of as-yet-incurable diseases like Alzheimer`s, ALS, and
+              Parkinson`s. Already, quantum computers
+              are being put to work to help solve the greatest mystery in science—the origin of the universe.
+            </p>
+            <div id="payDeliver">
+              <button class="checkOutBtn"
+                onclick="localStorage.setItem('Quantum Supremacy', '1');alert('added to your cart');">
+                <b>
+                  Add To Cart
+                </b>
+              </button>
+              <button class="buy-btn" onclick="checkOutClicked();">
+                <b>
+                  Buy Now
+                </b>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
   <div class="paymentForm" id="checkOutForm">
     <div class="paymentForm-container">
       <h2>
@@ -142,7 +154,6 @@
   </div>
   <script src="cart.js"></script>
   <script src="script.js"></script>
-  <hr>
   <footer>
   </footer>
 </body>
