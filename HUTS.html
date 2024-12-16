@@ -46,28 +46,36 @@
       Cart
     </div>
   </nav>
-  <article>
-    <section>
-      <div class="row">
-        <div class="column">
-          <img src="resources/book13(1).jpg" width="auto" height="400px" onclick="inlarge(this);">
+  <table>
+    <tr>
+      <td>
+        <div class="row">
+          <div class="column">
+            <img src="resources/book13(1).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+          <div class="column">
+            <img src="resources/book13(2).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+          <div class="column">
+            <img src="resources/book13(3).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
+          <div class="column">
+            <img src="resources/book13(4).jpg" width="auto" height="400px" onclick="inlarge(this);">
+          </div>
         </div>
-        <div class="column">
-          <img src="resources/book13(2).jpg" width="auto" height="400px" onclick="inlarge(this);">
+  
+        <div class="container">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+          <img id="expandedImg" style="width:auto;height:10%;">
+          <div id="imgtext"></div>
         </div>
-        <div class="column">
-          <img src="resources/book13(3).jpg" width="auto" height="400px" onclick="inlarge(this);">
-        </div>
-        <div class="column">
-          <img src="resources/book13(4).jpg" width="auto" height="400px" onclick="inlarge(this);">
-        </div>
-      </div>
-
-      <div class="container">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <img id="expandedImg" style="width:auto;height:10%;">
-        <div id="imgtext"></div>
-      </div>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+  </table>
+      
       <fieldset class="desc">
         <div>
           <h2 id="bookTitle">
@@ -114,8 +122,6 @@
           </button>
         </div>
       </div>
-    </section>
-  </article>
   <hr>
   <footer>
   </footer>
