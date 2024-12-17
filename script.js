@@ -43,31 +43,6 @@ for (var i = 0; i < coll.length; i++) {
   });
 }
 
-for (val i = 0; i < 3; i++) {
-  for (var j = 0; j < 7; j++) {
-    var item = document.getElementsByClassName("book");
-    var gen = document.getElementsByClassName("genre").textContent;
-    if (gen == "Fiction") {
-      if (document.getElementById("Fiction").checked) {
-        item.style.display = "block";
-      } else item.style.display = "none";
-    }
-    if (gen == "Non-Fiction") {
-      if (document.getElementById("Non-Fiction").checked) {
-        item.style.display = "block";
-      } else item.style.display = "none";
-    }
-    var top = item.getElementsByClassName("topic").textContent;
-    if (document.getElementById("AllTopics")) {
-      item.style.display = "block";
-    } else if (top == "Science") {
-      if (document.getElementById("Science")) {
-        item.style.display = "block";
-      } else item.style.display = "none";
-    }
-  }
-}
-
 function inlarge(imgs) {
   var expandImg = document.getElementById("expandedImg");
   var imgText = document.getElementById("imgtext");
