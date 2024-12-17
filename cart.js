@@ -85,6 +85,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const minus = document.createElement('button');
   minus.textContent = "-";
+  minus.id = "minusBtn" + i;
   minus.addEventListener("click", minusVal);
   quantChanger.appendChild(minus);
 
@@ -94,6 +95,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
   const plus = document.createElement('button');
   plus.textContent = "+";
+  plus.id = "plusBtn" + i;
   plus.addEventListener("click", plusVal);
   quantChanger.appendChild(plus);
 
