@@ -113,22 +113,15 @@ h1 {
   font-size: 15px;
 }
 
-.dropdown {
-  display: none;
-}
-
-.dropdown:hover {
-  display: block;
-  position: absolute;
-}
-
 .dropdownItems {
   background-color: #777;
   cursor: pointer;
+  display: none;
 }
 
 .dropdownItems:hover {
   background-color: #eee;
+  display: block;
 }
 
 .icon {
