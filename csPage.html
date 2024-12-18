@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    SciBooks sorter
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="filter.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="headTitle">
+      <h2>
+        <b>
+          <span style="color:blue;">
+            Sci
+          </span>
+          <span style="color:green;">
+            Books
+          </span>
+        </b>
+      </h2>
+      <span style="text-align:right;">
+        <i class="icon fa fa-github-square" style="color:black;"
+          onclick="window.location.href='https://github.com/caleb-sudo';"></i>
+        <i class="icon fa fa-youtube-play" style="color:red;"></i>
+        <i class="icon fa fa-twitter" style="color:aqua;"></i>
+        <i class="icon fa fa-facebook-square" style="color:blue;"></i>
+      </span>
+    </div>
+  </header>
+  <nav class="stick">
+    <div class="menu fa fa-home" onclick="window.location.href='index.html';">
+      Home
+    </div>
+    <div class="menu fa fa-search">
+      Lookup
+    </div>
+    <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
+      Cart
+    </div>
+  </nav>
+  <br>
+  <hr>
+  <br>
+  <article>
+    <section class="booksSect">
+      <table class="booksTable">
+        <tr class="booksRow">
+          <td class="book" onclick="window.location.href='TCL.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic CompSci">
+                Computer Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book9(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      The C Programming Language
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Brian_Ritchie">
+                  By: Brian W. Kernighan & Dennis M. Ritchie
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The C Programming Language', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <br>
+  </article>
+  <footer>
+    <div style="margin-left:49%;">
+      <ul style="text-align:center;">
+        <li style="display:flex;">
+          <a href="questions.html" class="footerLink">
+            <b>
+              Frequently Asked Questions
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="contacts.html" class="footerLink">
+            <b>
+              Contacts
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="security.html" class="footerLink">
+            <b>
+              Security
+            </b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <h2>
+      <span style="color:blue;">
+        Sci
+      </span>
+      <span style="color:green;">
+        Books
+      </span>
+    </h2>
+  </footer>
+</body>
+
+</html>
