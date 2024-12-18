@@ -113,6 +113,24 @@ h1 {
   font-size: 15px;
 }
 
+.dropdown {
+  display: none;
+}
+
+.dropdown:hover {
+  display: block;
+  position: absolute;
+}
+
+.dropdownItem {
+  background-color: #777;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #eee;
+}
+
 .icon {
   cursor: pointer;
 }
@@ -554,4 +572,9 @@ aside {
 .btn .cancel {
   background-color: red;
   font-size: 40px;
+}
+
+.underline {
+  font-style: underline;
+  font-size: 15px;
 }
