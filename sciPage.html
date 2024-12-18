@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Science Books
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="filter.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="headTitle">
+      <h2>
+        <b>
+          <span style="color:blue;">
+            Sci
+          </span>
+          <span style="color:green;">
+            Books
+          </span>
+        </b>
+      </h2>
+      <span style="text-align:right;">
+        <i class="icon fa fa-github-square" style="color:black;"
+          onclick="window.location.href='https://github.com/caleb-sudo';"></i>
+        <i class="icon fa fa-youtube-play" style="color:red;"></i>
+        <i class="icon fa fa-twitter" style="color:aqua;"></i>
+        <i class="icon fa fa-facebook-square" style="color:blue;"></i>
+      </span>
+    </div>
+  </header>
+  <nav class="stick">
+    <div class="menu fa fa-home" onclick="window.location.href='index.html';">
+      Home
+    </div>
+    <div class="menu fa fa-search">
+      Lookup
+    </div>
+    <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
+      Cart
+    </div>
+  </nav>
+  <br>
+  <hr>
+  <br>
+  <article>
+    <section class="booksSect">
+      <table class="booksTable">
+        <tr class="booksRow">
+          <td>
+          <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book1(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title" style="font-size: larger;">
+                  <b>
+                    Quantum Supremacy
+                  </b>
+                </span>
+                <br>
+                <span class="auther Michio">
+                  By: Michio Kaku
+                </span>
+                <br>
+                <span class="cost">
+                  $15.99
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Quantum Supremacy', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book" onclick="window.location.href='OOT.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book2(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      On The Origin of Time
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Stephen">
+                  By: Stephen Hawking
+                </span>
+                <br>
+                <span class="cost">
+                  $15.99
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('On The Origin of Time', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book" onclick="window.location.href='O.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book3(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Origins
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Neil">
+                  By: Neil DeGrasse Tyson
+                </span>
+                <br>
+                <span class="cost">
+                  $10.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Origins', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td class="book" onclick="window.location.href='APH.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book4(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Astrophysics for people in a hurry
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Neil">
+                  By: Neil DeGrasse Tyson
+                </span>
+                <br>
+                <span class="cost">
+                  $15.99
+                </span>
+              </span>
+              <button
+                onclick="localStorage.setItem('Astrophysics for people in a hurry', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book" onclick="window.location.href='AGL.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Space
+              </span>
+              <br>
+              <br>
+              <img src="resources/book5(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      An Astronaut's Guide to Life
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Chris">
+                  By: Chris Hadfield
+                </span>
+                <br>
+                <span class="cost">
+                  $10.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem(`An Astronaut's Guide to Life`, 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book" onclick="window.location.href='TGD.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book6(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      The Grand Design
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Stephen">
+                  By: Stephen Hawking
+                </span>
+                <br>
+                <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                  $18.00
+                </span>
+                <span style="font-size:20px">
+                  $9.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The Grand Design', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr class="booksRow">
+          <td class="book" onclick="window.location.href='LFA.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book7(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Letters From an Astrophysicsist
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Neil">
+                  By: Neil DeGrasse Tyson
+                </span>
+                <br>
+                <span class="cost">
+                  $25.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Letters From an Astrophysicist', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book" onclick="window.location.href='BABQ.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic">
+                Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book8(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      Breif Answers, Big Questions
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Non-Fiction">
+                  By: Stephen Hawking
+                </span>
+                <br>
+                <span style="color:rgb(86, 89, 89);text-decoration:line-through;font-size:20px;">
+                  $60.00
+                </span>
+                <span style="font-size:20px">
+                  $45.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('Breif Answers, Big Questions', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+          <td class="book" onclick="window.location.href='TCL.html';">
+            <div class="card">
+              <span class="genre">
+                Non-Fiction
+              </span>
+              <span class="topic CompSci">
+                Computer Science
+              </span>
+              <br>
+              <br>
+              <img src="resources/book9(1).jpg" style="max-width: 70%; max-height: auto;">
+              <br>
+              <span>
+                <span class="title">
+                  <b>
+                    <a>
+                      The C Programming Language
+                    </a>
+                  </b>
+                </span>
+                <br>
+                <span class="auther Brian_Ritchie">
+                  By: Brian W. Kernighan & Dennis M. Ritchie
+                </span>
+                <br>
+                <span class="cost">
+                  $20.00
+                </span>
+              </span>
+              <button onclick="localStorage.setItem('The C Programming Language', 1);alert('Added to your cart');">
+                Add to Cart
+              </button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <br>
+  </article>
+  <footer>
+    <div style="margin-left:49%;">
+      <ul style="text-align:center;">
+        <li style="display:flex;">
+          <a href="questions.html" class="footerLink">
+            <b>
+              Frequently Asked Questions
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="contacts.html" class="footerLink">
+            <b>
+              Contacts
+            </b>
+          </a>
+        </li>
+        <li style="display:flex;">
+          <a href="security.html" class="footerLink">
+            <b>
+              Security
+            </b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <h2>
+      <span style="color:blue;">
+        Sci
+      </span>
+      <span style="color:green;">
+        Books
+      </span>
+    </h2>
+  </footer>
+</body>
+
+</html>
