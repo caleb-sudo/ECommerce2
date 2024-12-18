@@ -122,12 +122,12 @@ h1 {
   position: absolute;
 }
 
-.dropdownItem {
+.dropdownItems {
   background-color: #777;
   cursor: pointer;
 }
 
-.dropdownItem:hover {
+.dropdownItems:hover {
   background-color: #eee;
 }
 
