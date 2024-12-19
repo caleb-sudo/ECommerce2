@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Java Methods An Intoduction to Object Orientated Programming
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="headTitle">
+      <h2>
+        <b>
+          <span style="color:blue;">
+            Sci
+          </span>
+          <span style="color:green;">
+            Books
+          </span>
+        </b>
+      </h2>
+      <hr style="margin-right:10%;">
+      <span style="text-align:right;">
+        <i class="icon fa fa-github-square" style="color:black;"
+          onclick="window.location.href='https://github.com/caleb-sudo';"></i>
+        <i class="icon fa fa-youtube-play" style="color:red;"></i>
+        <i class="icon fa fa-twitter" style="color:aqua;"></i>
+        <i class="icon fa fa-facebook-square" style="color:blue;"></i>
+      </span>
+    </div>
+  </header>
+  <nav class="stick">
+    <div class="menu fa fa-home" onclick="window.location.href='index.html';">
+      Home
+    </div>
+    <div class="dropdown">
+      <div class="menu">
+        Catagories
+      </div>
+      <div class="dropdown-content">
+        <hr>
+        <a href="sciPage.html">
+          Science
+        </a>
+        <hr>
+        <a href="spPage.html">
+          Space
+        </a>
+        <hr>
+        <a href="csPage.html">
+          Computer Science
+        </a>
+        <hr>
+        <a href="ssPage.html">
+          Short Stories
+        </a>
+        <hr>
+        <a href="uPage.html">
+          Uncertainty
+        </a>
+        <hr>
+      </div>
+    </div>
+    <div class="menu fa fa-search" onclick="window.location.href='sorter.html';">
+      Lookup
+    </div>
+    <div class="menu fa fa-shopping-cart" onclick="window.location.href='Cart.html';">
+      Cart
+    </div>
+  </nav>
+  <section>
+    <hr>
+    <br>
+    <table>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td>
+                <img src="resources/book23(1).jpg" id="pict1" width="auto" height="700px">
+              </td>
+            </tr>
+          </table>
+          <div class="pictures">
+            <table>
+              <tr>
+                <th>
+                  <img src="resources/book23(2).jpg" id="pict2" width="100px" height="100px" onclick="change(pict1, pict2);">
+                </th>
+                <th>
+                  <img src="resources/book23(3).jpg" id="pict3" width="100px" height="100px" onclick="change(pict1, pict3);">
+                </th>
+                <th>
+                  <img src="resources/book23(4).jpg" id="pict4" width="100px" height="100px" onclick="change(pict1, pict4);">
+                </th>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <fieldset class="desc">
+            <div>
+              <h2 id="bookTitle">
+                Java Methods An Intoduction to Object Orientated Programming
+                <br>
+                $20.00
+              </h2>
+              <h3 id="bookAuther">
+                By: Maria Litvin & Gary Litvin
+              </h3>
+              <hr>
+              <p id="bookDescription">
+                
+              </p>
+              <div id="payDeliver">
+                <button class="checkOutBtn"
+                  onclick="localStorage.setItem('Java Methods An Intoduction to Object Orientated Programming', '1');alert('added to your cart');">
+                  <b>
+                    Add To Cart
+                  </b>
+                </button>
+                <button class="buy-btn" onclick="checkOutClicked();">
+                  <b>
+                    Buy Now
+                  </b>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+    </table>
+    <div class="paymentForm" id="checkOutForm">
+      <div class="paymentForm-container">
+        <h2>
+          Select your payment method
+        </h2>
+        <button class="btn"
+          onclick="window.location.href='https://www.paypal.com/ca/digital-wallet/send-receive-money/paypal-me';">
+          <i class="fa fa-paypal" style="color:blue;"></i>
+          Paypal
+        </button>
+        <button class="btn" onclick="window.location.href='PaymentOpts.html';">
+          <i class="fa fa-credit-card" style="color:black;"></i>
+          Credit Card
+        </button>
+        <button class="btn cancel" onclick="checkOutCanceled();">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </section>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+  <hr>
+  <table style="width:100%;">
+    <tr>
+      <td>
+        <footer>
+          <div style="margin-left:49%;">
+            <ul style="text-align:center;">
+              <li style="display:flex;">
+                <a href="questions.html" class="footerLink">
+                  <b>
+                    Frequently Asked Questions
+                  </b>
+                </a>
+              </li>
+              <li style="display:flex;">
+                <a href="contacts.html" class="footerLink">
+                  <b>
+                    Contacts
+                  </b>
+                </a>
+              </li>
+              <li style="display:flex;">
+                <a href="security.html" class="footerLink">
+                  <b>
+                    Security
+                  </b>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <br>
+          <br>
+          <h2>
+            <span style="color:blue;">
+              Sci
+            </span>
+            <span style="color:green;">
+              Books
+            </span>
+          </h2>
+        </footer>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
