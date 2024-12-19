@@ -133,10 +133,6 @@ h1 {
   display: block;
 }
 
-.dropdown-content a:hover {
-  background-color: black;
-}
-
 .icon {
   cursor: pointer;
 }
